@@ -6,6 +6,7 @@ from os import path
 
 from classes.color_scheme_strings import ColorSchemeStrings
 from classes.color_scheme_strings import ErrorStrings
+from classes.rgb_color import RgbColor
 from classes.rgb_color import RgbConst
 from utilities.color_scheme_utils import GeneralUtils as Utils
 
@@ -141,3 +142,16 @@ class ColorScheme():
       f.write(self.color_scheme_str_)
       f.close()
 
+  #_____________________________________________________________________
+  def print_color_scheme(self) -> None:
+    """
+    Prints color scheme to console as colored text.
+    """
+
+    for i in range(0, len(self.palette_)):
+      rgb_dict: dict = RgbColor.get_rgb_from_hex(self.palette_[i])
+      Utils.print_with_color(rgb_dict[RgbConst.RED_STR]
+        , rgb_dict[RgbConst.GRN_STR]
+        , rgb_dict[RgbConst.BLU_STR]
+        , f'Color {i:2d}'
+      )

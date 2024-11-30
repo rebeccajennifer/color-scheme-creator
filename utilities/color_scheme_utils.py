@@ -167,3 +167,19 @@ class GeneralUtils:
     lowercase: str = s.lower()
 
     return lowercase == 'true' or lowercase == 't'
+
+  #_____________________________________________________________________
+  def print_with_color(red: int, grn: int, blu: int, text: str) -> None:
+    """
+    Prints text to screen with defined forground color.
+
+    Parameters
+    red  - red value in RGB representation of color range[0-255]
+    grn  - grn value in RGB representation of color range[0-255]
+    blu  - blu value in RGB representation of color range[0-255]
+    text - text to print
+    """
+
+    colored_str: str = f'\033[38;2;{red};{grn};{blu}m{text}\033[0m'
+    print(colored_str)
+    return

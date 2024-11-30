@@ -1,7 +1,8 @@
 #_______________________________________________________________________
 #
 import argparse
-from os import path
+
+from termcolor import colored
 
 from classes.color_scheme_parser import ColorSchemeParser
 from classes.color_scheme_parser import ParserStrings
@@ -56,5 +57,9 @@ if __name__ == '__main__':
 
   color_scheme.write_file(args.out_dir)
 
+  print(f'{ColorSchemeStrings.LINE}\n\n')
+  print(ColorSchemeStrings.OUTPUT_STR)
+  print(f'{ColorSchemeStrings.LINE}\n')
   print(color_scheme.color_scheme_str_)
   print(f'{ColorSchemeStrings.LINE}\n\n')
+  color_scheme.print_color_scheme()
