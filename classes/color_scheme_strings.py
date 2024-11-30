@@ -8,7 +8,7 @@ from utilities.color_scheme_utils import GeneralUtils as Utils
 class ColorSchemeStrings:
 
   LINE: str =\
-    '\n________________________________________________________________'
+    '________________________________________________________________'
 
   CONTINUE: str =\
     '\nPress enter to continue.'\
