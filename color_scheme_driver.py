@@ -9,9 +9,9 @@ from classes.color_scheme_parser import ParserStrings
 
 from classes.color_scheme_strings import ColorSchemeStrings, ErrorStrings
 
-from classes.scheme_types.base_scheme import ColorScheme
 from classes.scheme_types.gnome_scheme import GnomeScheme
 from classes.scheme_types.konsole_scheme import KonsoleScheme
+from classes.scheme_types.vscode_term_scheme import VsCodeTermScheme
 
 from utilities.color_scheme_utils import GeneralUtils as Utils
 
@@ -42,6 +42,10 @@ if __name__ == '__main__':
 
   elif (args.scheme_type == ParserStrings.KONSOLE_INPUT):
     SchemeType = KonsoleScheme
+
+  elif (args.scheme_type == ParserStrings.VSCODE_TERM_INPUT):
+    SchemeType = VsCodeTermScheme
+
 
   if (args.default):
     color_scheme = SchemeType()

@@ -42,6 +42,7 @@ class RgbConst:
   DEFAULT_RGB_INT_LIST: list[int] =\
     Utils.str_list_to_hex_list(DEFAULT_RGB_STR_LIST.split())
 
+
 #_______________________________________________________________________
 class RgbColor:
 

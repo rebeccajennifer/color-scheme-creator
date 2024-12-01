@@ -32,6 +32,7 @@ class ParserStrings:
   SCHEME_TYPES: list =\
     [ 'gnome'
     , 'konsole'
+    , 'vscode-term'
     ]
 
   CMD_LINE_ENTRY_GROUP_TITLE: str =\
@@ -89,8 +90,8 @@ class ParserStrings:
     f'{RgbColor.int_list_hex_str(RgbConst.DEFAULT_RGB_INT_LIST)}'
 
   GNOME_INPUT: str = 'gnome'
-
   KONSOLE_INPUT: str = 'konsole'
+  VSCODE_TERM_INPUT: str = 'vscode-term'
 
   COLOR_RANGE: str = '{0x000000-0xFFFFFF}'
 
