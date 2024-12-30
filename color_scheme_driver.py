@@ -2,8 +2,6 @@
 #
 import argparse
 
-from termcolor import colored
-
 from classes.color_scheme_parser import ColorSchemeParser
 from classes.color_scheme_parser import ParserStrings
 
@@ -46,7 +44,6 @@ if __name__ == '__main__':
   elif (args.scheme_type == ParserStrings.VSCODE_TERM_INPUT):
     SchemeType = VsCodeTermScheme
 
-
   if (args.default):
     color_scheme = SchemeType()
 
@@ -64,6 +61,10 @@ if __name__ == '__main__':
   print(f'{ColorSchemeStrings.LINE}\n\n')
   print(ColorSchemeStrings.OUTPUT_STR)
   print(f'{ColorSchemeStrings.LINE}\n')
+
+  if (SchemeType == VsCodeTermScheme):
+    print(VsCodeTermScheme.VSCODE_DESCR)
+
   print(color_scheme.color_scheme_str_)
   print(f'{ColorSchemeStrings.LINE}\n\n')
   color_scheme.print_color_scheme()

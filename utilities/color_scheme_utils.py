@@ -107,13 +107,14 @@ class GeneralUtils:
     """
     Reads json file in the format
     ________________________________
-    { "intense-bold": "true"
-      ,"background" : "0x282828"
-      , "foreground": "0xDF5f87"
-      , "color-list":["0x5f0000"
-      ...
+    { "intense-bold"  : "true"
+    , "background"    : "0x282828"
+    , "foreground"    : "0xDF5f87"
+    , "color-list"    :
+        [ "0x5f0000"
+        ...
         , "0xFFFFFF"
-      ]
+        ]
     }
     ________________________________
 

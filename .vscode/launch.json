@@ -24,6 +24,27 @@
             , "~/.themes/"
           ]
         }
+        , { "name": "vscode-cli"
+        , "type": "debugpy"
+        , "request": "launch"
+        , "program": "${workspaceFolder}\\color_scheme_driver.py"
+        , "console": "integratedTerminal"
+        , "args":
+          [ "--scheme_type"
+            , "vscode-term"
+            //, "--background_color"
+            //, "0x1c1c1c"
+            //, "--foreground_color"
+            //, "0xd7005f"
+            //, "--rgb_list"
+            //, "0x000000 0x800000 0x008000 0x808000 0x000080 0x800080 0x008080 0x808080 0x000000 0xff0000 0x00ff00 0xffff00 0x0000ff 0xff00ff 0x00ffff 0xffffff"
+            , "--file"
+            , "utilities/color_file_ex_0.json"
+            , "--name"
+            , "vscode-term-color-scheme"
+          ]
+        }
+ 
         , { "name": "color-scheme-help"
           , "type": "debugpy"
           , "request": "launch"
