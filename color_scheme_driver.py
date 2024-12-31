@@ -1,17 +1,41 @@
 #_______________________________________________________________________
+#       _   __   _   _ _   _   _   _         _
+#  |   |_| | _  | | | V | | | | / |_/ |_| | /
+#  |__ | | |__| |_| |   | |_| | \ |   | | | \_
+#   _  _         _ ___  _       _ ___   _                        / /
+#  /  | | |\ |  \   |  | / | | /   |   \                        (**)
+#  \_ |_| | \| _/   |  | \ |_| \_  |  _/                        (____)o
+#_______________________________________________________________________
 #
+#-----------------------------------------------------------------------
+#  Copyright 2024, Rebecca Rashkin
+#  -------------------------------
+#  This code may be copied, redistributed, transformed, or built upon in
+#  any format for educational, non-commercial purposes.
+# 
+#  Please give me appropriate credit should you choose to modify this
+#  code. Thank you :)
+#-----------------------------------------------------------------------
+#
+#_______________________________________________________________________
+#  //\^.^/\\   //\^.^/\\   //\^.^/\\   //\^.^/\\   //\^.^/\\   //\^.^/\\
+#_______________________________________________________________________
+
+#_______________________________________________________________________
+# Driver for program
+#_______________________________________________________________________
+
 import argparse
 
 from classes.color_scheme_parser import ColorSchemeParser
 from classes.color_scheme_parser import ParserStrings
-
-from classes.color_scheme_strings import ColorSchemeStrings, ErrorStrings
 
 from classes.scheme_types.gnome_scheme import GnomeScheme
 from classes.scheme_types.konsole_scheme import KonsoleScheme
 from classes.scheme_types.vscode_term_scheme import VsCodeTermScheme
 
 from utilities.color_scheme_utils import GeneralUtils as Utils
+
 
 #_______________________________________________________________________
 def new_line (new_line_count: int = 1) -> None:
@@ -47,6 +71,7 @@ if __name__ == '__main__':
   if (args.default):
     color_scheme = SchemeType()
 
+  # Data in file overrides all other arguments
   if(args.file):
     color_scheme = SchemeType(Utils.read_hex_color_json(args.file))
 

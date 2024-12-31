@@ -1,3 +1,22 @@
+//______________________________________________________________________
+//  __                _
+// |__ |   | |  \/   |_\ | | |\ | |\ | | |
+// |   |__ |_|  /\   |_/ |_| | \| | \|  |
+//  _   _    _    _         _                                    / /
+// | \ |_   \  | /   |\ |  \                                    (**)
+// |_/ |_  _/  | \_| | \| _/                                    (____)o
+//______________________________________________________________________
+// Copyright 2024
+//______________________________________________________________________
+// This code may be copied, redistributed, transformed, or built upon in
+// any format for educational, non-commercial purposes.
+// 
+// Please give me appropriate credit should you choose to modify this
+// code. Thank you :)
+//______________________________________________________________________
+
+////////////////////////////////////////////////////////////////////////
+
 {
   "version":        "0.2.0"
   , "configurations":
@@ -45,13 +64,13 @@
           ]
         }
  
-        , { "name": "color-scheme-help"
-          , "type": "debugpy"
+        , { "name"   : "help"
+          , "type"   : "debugpy"
           , "request": "launch"
           , "program": "${workspaceFolder}/color_scheme_driver.py"
           , "console": "integratedTerminal"
           , "args":
-          [ //"--help"
+          [ "--help"
           ]
         }
         , { "name": "file-arg-test"
