@@ -1,3 +1,26 @@
+//______________________________________________________________________
+//      _   __   _   _ _   _   _   _         _
+// |   |_| | _  | | | V | | | | / |_/ |_| | /
+// |__ | | |__| |_| |   | |_| | \ |   | | | \_
+//  _  _         _ ___  _       _ ___   _                        / /
+// /  | | |\ |  \   |  | / | | /   |   \                        (^^)
+// \_ |_| | \| _/   |  | \ |_| \_  |  _/                        (____)o
+//______________________________________________________________________
+//
+//----------------------------------------------------------------------
+// Copyright 2024, Rebecca Rashkin
+// -------------------------------
+// This code may be copied, redistributed, transformed, or built upon in
+// any format for educational, non-commercial purposes.
+//
+// Please give me appropriate credit should you choose to modify this
+// code. Thank you :)
+//----------------------------------------------------------------------
+//
+//______________________________________________________________________
+// //\^.^/\\   //\^.^/\\   //\^.^/\\   //\^.^/\\   //\^.^/\\   //\^.^/\\
+//______________________________________________________________________
+
 {
   "version":        "0.2.0"
   , "configurations":
@@ -24,13 +47,34 @@
             , "~/.themes/"
           ]
         }
-        , { "name": "color-scheme-help"
-          , "type": "debugpy"
+        , { "name": "vscode-cli"
+        , "type": "debugpy"
+        , "request": "launch"
+        , "program": "${workspaceFolder}\\color_scheme_driver.py"
+        , "console": "integratedTerminal"
+        , "args":
+          [ "--scheme_type"
+            , "vscode-term"
+            //, "--background_color"
+            //, "0x1c1c1c"
+            //, "--foreground_color"
+            //, "0xd7005f"
+            //, "--rgb_list"
+            //, "0x000000 0x800000 0x008000 0x808000 0x000080 0x800080 0x008080 0x808080 0x000000 0xff0000 0x00ff00 0xffff00 0x0000ff 0xff00ff 0x00ffff 0xffffff"
+            , "--file"
+            , "utilities/color_file_ex_0.json"
+            , "--name"
+            , "vscode-term-color-scheme"
+          ]
+        }
+ 
+        , { "name"   : "help"
+          , "type"   : "debugpy"
           , "request": "launch"
           , "program": "${workspaceFolder}/color_scheme_driver.py"
           , "console": "integratedTerminal"
           , "args":
-          [ //"--help"
+          [ "--help"
           ]
         }
         , { "name": "file-arg-test"
@@ -69,9 +113,9 @@
           , "args":
           [ "--default"
             , "--scheme_type"
-            , "konsole"
-            , "--out_dir"
-            , "~/.themes"
+            , "vscode-term"
+            //, "--out_dir"
+            //, "~/.themes"
             , "--name"
             , "default"
           ]

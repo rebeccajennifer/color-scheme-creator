@@ -1,6 +1,29 @@
+
 #_______________________________________________________________________
-# This program creates color scheme files in the format of several
-# terminal programs.
+#       _   __   _   _ _   _   _   _         _
+#  |   |_| | _  | | | V | | | | / |_/ |_| | /
+#  |__ | | |__| |_| |   | |_| | \ |   | | | \_
+#   _  _         _ ___  _       _ ___   _                        / /
+#  /  | | |\ |  \   |  | / | | /   |   \                        (^^)
+#  \_ |_| | \| _/   |  | \ |_| \_  |  _/                        (____)o
+#_______________________________________________________________________
+#
+#-----------------------------------------------------------------------
+#  Copyright 2024, Rebecca Rashkin
+#  -------------------------------
+#  This code may be copied, redistributed, transformed, or built upon in
+#  any format for educational, non-commercial purposes.
+# 
+#  Please give me appropriate credit should you choose to modify this
+#  code. Thank you :)
+#-----------------------------------------------------------------------
+#
+#_______________________________________________________________________
+#  //\^.^/\\   //\^.^/\\   //\^.^/\\   //\^.^/\\   //\^.^/\\   //\^.^/\\
+#_______________________________________________________________________
+
+#_______________________________________________________________________
+# Argument parser file
 #_______________________________________________________________________
 
 import argparse
@@ -12,7 +35,6 @@ from classes.rgb_color import RgbColor, RgbConst
 from utilities.color_scheme_utils import GeneralUtils
 
 
-# TODO change scheme_type to scheme_type
 #_______________________________________________________________________
 class ParserStrings:
 
@@ -32,19 +54,20 @@ class ParserStrings:
   SCHEME_TYPES: list =\
     [ 'gnome'
     , 'konsole'
+    , 'vscode-term'
     ]
 
   CMD_LINE_ENTRY_GROUP_TITLE: str =\
     'Command Line Color Entry'
 
   CMD_LINE_ENTRY_GROUP_DESC: str =\
-    'Argument group for command line entry'
+    'Argument group for command line entry.'
 
   BACKGND_HELP_DESC: str =\
-    'Background color'
+    'Background color.'
 
   FOREGND_HELP_DESC: str =\
-    'Foreground color'
+    'Foreground color.'
 
   RGB_LIST_HELP_DESC: str =\
     'List of 16 RGB values corresponding to color indices 0 - 15.'
@@ -89,8 +112,8 @@ class ParserStrings:
     f'{RgbColor.int_list_hex_str(RgbConst.DEFAULT_RGB_INT_LIST)}'
 
   GNOME_INPUT: str = 'gnome'
-
   KONSOLE_INPUT: str = 'konsole'
+  VSCODE_TERM_INPUT: str = 'vscode-term'
 
   COLOR_RANGE: str = '{0x000000-0xFFFFFF}'
 
