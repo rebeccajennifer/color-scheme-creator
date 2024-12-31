@@ -3,7 +3,7 @@
 #  |   |_| | _  | | | V | | | | / |_/ |_| | /
 #  |__ | | |__| |_| |   | |_| | \ |   | | | \_
 #   _  _         _ ___  _       _ ___   _                        / /
-#  /  | | |\ |  \   |  | / | | /   |   \                        (**)
+#  /  | | |\ |  \   |  | / | | /   |   \                        (^^)
 #  \_ |_| | \| _/   |  | \ |_| \_  |  _/                        (____)o
 #_______________________________________________________________________
 #
@@ -51,8 +51,9 @@ class VsCodeTermScheme(ColorScheme):
     settings_path = LINUX_SETTINGS_LOCATION
 
   VSCODE_DESCR: str =\
-    'Copy the following text to your settings.json file.'\
-    '\nYour settings.json file is usually located: '\
+    '\nCopy the following text to your settings.json file.'\
+    '\n'\
+    f'\nOn a {system()} system, settings.json is usually located:'\
     f'\n{settings_path}'\
     '\n'
 
