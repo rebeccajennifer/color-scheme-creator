@@ -29,7 +29,7 @@ from utilities.color_scheme_utils import GeneralUtils as Utils
 
 class TestConst:
 
-  ALL_CAPS_2_CHAR_WITH_0X: str = '0xFF'
+  ALL_CAPS_2_CHAR_WITH_0X: str = '0XFF'
   MIX_CAPS_2_CHAR_WITH_0X: str = '0xFf'
 
   ALL_CAPS_2_CHAR_NO_PRFX: str = 'FF'
