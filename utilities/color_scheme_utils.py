@@ -118,7 +118,7 @@ class GeneralUtils:
     }
     ________________________________
 
-    Paramters
+    Parameters
     file_path - path to json file
 
     Returns
@@ -170,17 +170,42 @@ class GeneralUtils:
     return lowercase == 'true' or lowercase == 't'
 
   #_____________________________________________________________________
-  def print_with_color(red: int, grn: int, blu: int, text: str) -> None:
+  def construct_color_print_str(text: str
+    , fg_red: int
+    , fg_grn: int
+    , fg_blu: int
+    , bg_red: int = -1
+    , bg_grn: int = -1
+    , bg_blu: int = -1
+  ) -> None:
     """
-    Prints text to screen with defined forground color.
+    Prints text to screen with defined foreground color.
 
     Parameters
-    red  - red value in RGB representation of color range[0-255]
-    grn  - grn value in RGB representation of color range[0-255]
-    blu  - blu value in RGB representation of color range[0-255]
     text - text to print
+    fg_red  - foreground red value in RGB range[0-255]
+    fg_grn  - foreground grn value in RGB range[0-255]
+    fg_blu  - foreground blu value in RGB range[0-255]
+
+    bg_red  - background red value in RGB range[0-255]
+              -1 indicates no background color
+    bg_grn  - background grn value in RGB range[0-255]
+              -1 indicates no background color
+    bg_blu  - background blu value in RGB range[0-255]
+              -1 indicates no background color
     """
 
-    colored_str: str = f'\033[38;2;{red};{grn};{blu}m{text}\033[0m'
-    print(colored_str)
-    return
+    # Background color
+    set_bg_str: str = ''
+
+    if (bg_red > -1 and bg_grn > -1 and bg_blu > -1):
+
+      # 48: Bash parameter code for foreground
+      set_bg_str = f'\033[48;2;{bg_red};{bg_grn};{bg_blu}m'
+
+    # Print text in background and foreground color as indicated in arg
+    # 38: Bash parameter code for foreground
+    colored_str: str =\
+      f'\033[38;2;{fg_red};{fg_grn};{fg_blu}m{set_bg_str}{text}\033[0m'
+
+    return colored_str

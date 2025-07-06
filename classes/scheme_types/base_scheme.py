@@ -12,7 +12,7 @@
 #  -------------------------------
 #  This code may be copied, redistributed, transformed, or built upon in
 #  any format for educational, non-commercial purposes.
-# 
+#
 #  Please give me appropriate credit should you choose to modify this
 #  code. Thank you :)
 #-----------------------------------------------------------------------
@@ -37,11 +37,20 @@ from utilities.color_scheme_utils import GeneralUtils as Utils
 #_______________________________________________________________________
 class ColorScheme():
 
-  BACKGROUND_COLOR: str = "background-color"
-  FOREGROUND_COLOR: str = "foreground-color"
-  PALETTE: str = "palette"
+  BACKGROUND_COLOR: str = 'background-color'
+  FOREGROUND_COLOR: str = 'foreground-color'
+  PALETTE: str = 'palette'
 
-  PALETTE_COLOR_COUNT: int = 8
+  PREVIEW: str = str(
+    '\n-------------------'
+    '\n Your Color Scheme'
+    '\n'
+  )
+  ALT_PREV: str = str(
+    '\n-------------------------'
+    '\n Alternative Backgrounds'
+    '\n'
+  )
 
   #_____________________________________________________________________
   def __init__(self, *arg):
@@ -171,10 +180,79 @@ class ColorScheme():
     Prints color scheme to console as colored text.
     """
 
-    for i in range(0, len(self.palette_)):
-      rgb_dict: dict = RgbColor.get_rgb_from_hex(self.palette_[i])
-      Utils.print_with_color(rgb_dict[RgbConst.RED_STR]
-        , rgb_dict[RgbConst.GRN_STR]
-        , rgb_dict[RgbConst.BLU_STR]
-        , f'Color {i:2d}'
+    bg: int = self.background_color_
+
+    bg_rgb: dict = RgbColor.get_rgb_from_hex(self.background_color_)
+
+    # Flag to determine if background color is light or dark
+    is_lite_bg: bool = self.background_color_ >= 0x808080
+
+    if (is_lite_bg):
+      greyscale_list: list = RgbConst.ANSI_256_LITE_GREYS
+    else:
+      greyscale_list: list = RgbConst.ANSI_256_DARK_GREYS
+
+    print(self.PREVIEW)
+
+    DOWN_ARROW: str =\
+    '\u2193'
+
+    RGHT_ARROW: str =\
+    '\u2192'
+
+    # Print table header
+    header: str = ' Selected Background' +\
+      '\n               ' + DOWN_ARROW + '\n Alt opt  ' + RGHT_ARROW
+
+    header += RgbColor.construct_color_print_str\
+      ( text=f' 0x{self.background_color_:06x} '
+      , fg=self.foreground_color_
+      , bg=bg
       )
+
+    bg_color_list: list = [self.background_color_]
+
+    # Make an abbreviated list
+    for i in range(0, len(greyscale_list)):
+      if (i % 3 == 0):
+        bg_color_list.append(greyscale_list[i])
+
+
+    for color in bg_color_list[1:len(bg_color_list)]:
+      header += '|' + RgbColor.construct_color_print_str\
+        ( text=f' 0x{color:06x} '
+        , fg=self.foreground_color_
+        , bg=color
+        )
+
+
+    header +='\n----------'
+
+    for i in range(len(bg_color_list)):
+      header += '|----------'
+    print(header)
+
+    colored_text: str = ''
+    #___________________________________________________________________
+    for i in range(0, len(self.palette_)):
+      crnt_color: int = self.palette_[i]
+
+      colored_text += RgbColor.construct_color_print_str\
+        ( text=f' 0x{crnt_color:06x} '
+        , fg=crnt_color
+        )
+
+      for grey in bg_color_list:
+        colored_text += '|'
+
+        colored_text += RgbColor.construct_color_print_str\
+        ( text=f' Color {i:2d} '
+        , fg=crnt_color
+        , bg=grey
+        )
+
+      colored_text += '\n'
+
+    print(colored_text)
+
+    return
