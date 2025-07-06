@@ -138,7 +138,7 @@ class RgbColor:
     return out_str
 
   #_____________________________________________________________________
-  def print_with_color(text: str
+  def construct_color_print_str(text: str
     , fg: int = 0
     , bg: int = -1
   ) -> None:
@@ -170,7 +170,7 @@ class RgbColor:
       bg_grn: int = -1
       bg_blu: int = -1
 
-    Utils.print_with_color(text=text
+    return Utils.construct_color_print_str(text=text
     , fg_red=fg_red
     , fg_grn=fg_grn
     , fg_blu=fg_blu
@@ -178,5 +178,3 @@ class RgbColor:
     , bg_grn=bg_grn
     , bg_blu=bg_blu
     )
-
-    return

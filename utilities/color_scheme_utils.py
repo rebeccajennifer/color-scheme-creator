@@ -170,7 +170,7 @@ class GeneralUtils:
     return lowercase == 'true' or lowercase == 't'
 
   #_____________________________________________________________________
-  def print_with_color(text: str
+  def construct_color_print_str(text: str
     , fg_red: int
     , fg_grn: int
     , fg_blu: int
@@ -208,5 +208,4 @@ class GeneralUtils:
     colored_str: str =\
       f'\033[38;2;{fg_red};{fg_grn};{fg_blu}m{set_bg_str}{text}\033[0m'
 
-    print(colored_str)
-    return
+    return colored_str

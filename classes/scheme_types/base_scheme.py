@@ -197,19 +197,36 @@ class ColorScheme():
     # Print table header
     header: str = f' Backgnd  | 0x{bg:06x}'
 
-    for grey in greyscale_list:
-      header += f' | 0x{grey:06x}'
+    for i in range(0, len(greyscale_list)):
+      if (i % 2 == 0):
+        grey: int = greyscale_list[i]
+        header += f' | 0x{grey:06x}'
 
     print(header)
 
-    f' Color -- | 0x-------'
-    f'----------|----------'
+    table_header_divider: str = '----------'
+
+    for i in range(8):
+      table_header_divider += '|----------'
+
+    print (table_header_divider)
+
+    bg_colors: list =\
+      greyscale_list.insert(0, self.background_color_)
+
+    strr = ''
     #___________________________________________________________________
     for i in range(0, len(self.palette_)):
       crnt_color: int = self.palette_[i]
-      RgbColor.print_with_color(text=f' Color {i:2d} | 0x{crnt_color:06x}'
+
+      strr += '\n' +\
+        RgbColor.construct_color_print_str\
+        ( text=f' Color {i:2d} | 0x{crnt_color:06x} '
         , fg=crnt_color
         , bg=self.background_color_
-      )
+        )
+
+    print(strr)
+
 
     return
