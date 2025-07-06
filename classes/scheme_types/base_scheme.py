@@ -171,27 +171,17 @@ class ColorScheme():
     Prints color scheme to console as colored text.
     """
 
+    bg_rgb: dict = RgbColor.get_rgb_from_hex(self.background_color_)
+
     for i in range(0, len(self.palette_)):
       rgb_dict: dict = RgbColor.get_rgb_from_hex(self.palette_[i])
       Utils.print_with_color(text=f'Color {i:2d}'
         , fg_red=rgb_dict[RgbConst.RED_STR]
         , fg_grn=rgb_dict[RgbConst.GRN_STR]
         , fg_blu=rgb_dict[RgbConst.BLU_STR]
-        , bg_red= 128
-        , bg_grn= 128
-        , bg_blu= 128
+        , bg_red=bg_rgb[RgbConst.RED_STR]
+        , bg_grn=bg_rgb[RgbConst.GRN_STR]
+        , bg_blu=bg_rgb[RgbConst.BLU_STR]
       )
 
-
-  #_______________________________________________________________________
-  # Notes
-  #_______________________________________________________________________
-  # Using the format:
-  # XX;YY;---
-  #
-  # XX - foreground or background, i.e. 48 = background
-  # YY - color mode ; 5 = 256 color mode, 2 = RGB
-
-  # Examples
-  # XX;2;R;G;B
-  # XX;5;ZZ       # ZZ - 1 - 255
+    return

@@ -12,7 +12,7 @@
 #  -------------------------------
 #  This code may be copied, redistributed, transformed, or built upon in
 #  any format for educational, non-commercial purposes.
-# 
+#
 #  Please give me appropriate credit should you choose to modify this
 #  code. Thank you :)
 #-----------------------------------------------------------------------
@@ -64,6 +64,38 @@ class RgbConst:
 
   DEFAULT_RGB_INT_LIST: list[int] =\
     Utils.str_list_to_hex_list(DEFAULT_RGB_STR_LIST.split())
+
+  GREYS_DARK: list =\
+  [ 0x000000
+  , 0x080808
+  , 0x121212
+  , 0x1c1c1c
+  , 0x262626
+  , 0x303030
+  , 0x3a3a3a
+  , 0x444444
+  , 0x4e4e4e
+  , 0x585858
+  , 0x626262
+  , 0x6c6c6c
+  , 0x767676
+  ]
+
+  GREYS_LITE: list =\
+  [ 0x808080
+  , 0x8a8a8a
+  , 0x949494
+  , 0x9e9e9e
+  , 0xa8a8a8
+  , 0xb2b2b2
+  , 0xbcbcbc
+  , 0xc6c6c6
+  , 0xd0d0d0
+  , 0xdadada
+  , 0xe4e4e4
+  , 0xeeeeee
+  , 0xffffff
+  ]
 
 
 #_______________________________________________________________________

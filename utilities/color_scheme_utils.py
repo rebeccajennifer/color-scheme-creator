@@ -179,7 +179,7 @@ class GeneralUtils:
     , bg_blu: int = -1
   ) -> None:
     """
-    Prints text to screen with defined forground color.
+    Prints text to screen with defined foreground color.
 
     Parameters
     fg_red  - foreground red value in RGB range[0-255]
@@ -191,13 +191,12 @@ class GeneralUtils:
     # Background color
     set_bg_str: str = ''
 
-    '\033[38;2;11;22;33m\033[48;2;44;55;66mYour text here\033[0m'
-
     if (bg_red > -1 and bg_grn > -1 and bg_blu > -1):
 
       # 48: Bash parameter code for foreground
       set_bg_str = f'\033[48;2;{bg_red};{bg_grn};{bg_blu}m'
 
+    # Print text in background and foreground color as indicated in arg
     # 38: Bash parameter code for foreground
     colored_str: str =\
       f'\033[38;2;{fg_red};{fg_grn};{fg_blu}m{set_bg_str}{text}\033[0m'
