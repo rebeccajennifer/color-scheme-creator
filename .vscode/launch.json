@@ -23,90 +23,90 @@
 
 { "version":        "0.2.0"
 , "configurations":
-    [ { "name": "command-line-input"
-      , "type": "debugpy"
-      , "request": "launch"
-      , "program": "${workspaceFolder}/color_scheme_driver.py"
-      , "console": "integratedTerminal"
-      , "args":
-        [ "--scheme_type"
-        , "gnome"
-        //, "--background_color"
-        //, "0x1c1c1c"
-        //, "--foreground_color"
-        //, "0xd7005f"
-        //, "--rgb_list"
-        , "--file"
-        , "sample-themes/flux-dark.json"
-        //, "--out_dir"
-        //, "~/.themes/"
-        ]
-      }
-    , { "name": "vscode-cli"
-      , "type": "debugpy"
-      , "request": "launch"
-      , "program": "${workspaceFolder}/color_scheme_driver.py"
-      , "console": "integratedTerminal"
-      , "args":
-        [ "--scheme_type"
-        , "vscode-term"
-        , "--file"
-        , "sample-themes/flux-dark.json"
-        , "--name"
-        , "vscode-term-color-scheme"
-        ]
+  [ { "name": "command-line-input"
+    , "type": "debugpy"
+    , "request": "launch"
+    , "program": "${workspaceFolder}/color_scheme_driver.py"
+    , "console": "integratedTerminal"
+    , "args":
+      [ "--scheme_type"
+      , "gnome"
+      //, "--background_color"
+      //, "0x1c1c1c"
+      //, "--foreground_color"
+      //, "0xd7005f"
+      //, "--rgb_list"
+      , "--file"
+      , "sample-themes/flux-dark.json"
+      //, "--out_dir"
+      //, "~/.themes/"
+      ]
     }
-    , { "name"   : "help"
-      , "type"   : "debugpy"
-      , "request": "launch"
-      , "program": "${workspaceFolder}/color_scheme_driver.py"
-      , "console": "integratedTerminal"
-      , "args":
-        [ "--help"
-        ]
-      }
-    , { "name": "file-arg-test"
+  , { "name": "vscode-cli"
+    , "type": "debugpy"
+    , "request": "launch"
+    , "program": "${workspaceFolder}/color_scheme_driver.py"
+    , "console": "integratedTerminal"
+    , "args":
+      [ "--scheme_type"
+      , "vscode-term"
+      , "--file"
+      , "sample-themes/flux-dark.json"
+      , "--name"
+      , "vscode-term-color-scheme"
+      ]
+  }
+  , { "name"   : "help"
+    , "type"   : "debugpy"
+    , "request": "launch"
+    , "program": "${workspaceFolder}/color_scheme_driver.py"
+    , "console": "integratedTerminal"
+    , "args":
+      [ "--help"
+      ]
+    }
+  , { "name": "file-arg-test"
+    , "type": "debugpy"
+    , "request": "launch"
+    , "program": "${workspaceFolder}/color_scheme_driver.py"
+    , "console": "integratedTerminal"
+    , "args":
+      [ "--scheme_type"
+      //, "gnome"
+      , "konsole"
+      //, "--out_dir"
+      //, "~/.themes/"
+      //, "~/themes/"
+      , "--file"
+      , "utilities/color_file_ex.json"
+      ]
+    }
+    , { "name": "out-dir-only"
       , "type": "debugpy"
       , "request": "launch"
       , "program": "${workspaceFolder}/color_scheme_driver.py"
       , "console": "integratedTerminal"
       , "args":
-        [ "--scheme_type"
-        //, "gnome"
-        , "konsole"
-        //, "--out_dir"
-        //, "~/.themes/"
-        //, "~/themes/"
-        , "--file"
-        , "utilities/color_file_ex.json"
-        ]
-      }
-      , { "name": "out-dir-only"
-        , "type": "debugpy"
-        , "request": "launch"
-        , "program": "${workspaceFolder}/color_scheme_driver.py"
-        , "console": "integratedTerminal"
-        , "args":
-        [ "--scheme_type"
-        , "gnome"
-        , "--out_dir"
-        , "~/.themes/"
-        ]
-      }
-      , { "name": "default"
-        , "type": "debugpy"
-        , "request": "launch"
-        , "program": "${workspaceFolder}/color_scheme_driver.py"
-        , "console": "integratedTerminal"
-        , "args":
-        [ "--default"
-        , "--scheme_type"
-        , "vscode-term"
-        //, "--out_dir"
-        //, "~/.themes"
-        , "--name"
-        , "default"
-        ]
-      }
-    ]
+      [ "--scheme_type"
+      , "gnome"
+      , "--out_dir"
+      , "~/.themes/"
+      ]
+    }
+    , { "name": "default"
+      , "type": "debugpy"
+      , "request": "launch"
+      , "program": "${workspaceFolder}/color_scheme_driver.py"
+      , "console": "integratedTerminal"
+      , "args":
+      [ "--default"
+      , "--scheme_type"
+      , "vscode-term"
+      //, "--out_dir"
+      //, "~/.themes"
+      , "--name"
+      , "default"
+      ]
+    }
+  ]
 }
