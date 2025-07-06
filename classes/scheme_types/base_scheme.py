@@ -194,39 +194,65 @@ class ColorScheme():
 
     print(self.PREVIEW)
 
+    DOWN_ARROW: str =\
+    '\u2193'
+
+    RGHT_ARROW: str =\
+    '\u2192'
+
     # Print table header
-    header: str = f' Backgnd  | 0x{bg:06x}'
+    header: str = ' Selected Background' +\
+      '\n               ' + DOWN_ARROW + '\n Options ' + RGHT_ARROW + ' '
 
+    header += RgbColor.construct_color_print_str\
+      ( text=f' 0x{self.background_color_:06x} '
+      , fg=self.foreground_color_
+      , bg=bg
+      )
+
+    bg_color_list: list = [self.background_color_]
+
+    # Make an abbreviated list
     for i in range(0, len(greyscale_list)):
-      if (i % 2 == 0):
-        grey: int = greyscale_list[i]
-        header += f' | 0x{grey:06x}'
+      if (i % 3 == 0):
+        bg_color_list.append(greyscale_list[i])
 
+
+    for color in bg_color_list[1:len(bg_color_list)]:
+      header += '|' + RgbColor.construct_color_print_str\
+        ( text=f' 0x{color:06x} '
+        , fg=self.foreground_color_
+        , bg=color
+        )
+
+
+    header +='\n----------'
+
+    for i in range(len(bg_color_list)):
+      header += '|----------'
     print(header)
 
-    table_header_divider: str = '----------'
-
-    for i in range(8):
-      table_header_divider += '|----------'
-
-    print (table_header_divider)
-
-    bg_colors: list =\
-      greyscale_list.insert(0, self.background_color_)
-
-    strr = ''
+    colored_text: str = ''
     #___________________________________________________________________
     for i in range(0, len(self.palette_)):
       crnt_color: int = self.palette_[i]
 
-      strr += '\n' +\
-        RgbColor.construct_color_print_str\
-        ( text=f' Color {i:2d} | 0x{crnt_color:06x} '
+      colored_text += RgbColor.construct_color_print_str\
+        ( text=f' 0x{crnt_color:06x} '
         , fg=crnt_color
-        , bg=self.background_color_
         )
 
-    print(strr)
+      for grey in bg_color_list:
+        colored_text += '|'
 
+        colored_text += RgbColor.construct_color_print_str\
+        ( text=f' Color {i:2d} '
+        , fg=crnt_color
+        , bg=grey
+        )
+
+      colored_text += '\n'
+
+    print(colored_text)
 
     return

@@ -1,8 +1,8 @@
 {   "intense-bold"              : "false"
   , "background-color"          : "0x282828"
   , "background-color-intense"  : "0x1c1c1c"
-  , "foreground-color"          : "0xdf5f87"
-  , "foreground-color-intense"  : "0xff5f87"
+  , "foreground-color"          : "0xd7d7d7"
+  , "foreground-color-intense"  : "0xffffff"
   , "palette"                   :
     [ "0x5f5f5f"
     , "0xd75f87"
