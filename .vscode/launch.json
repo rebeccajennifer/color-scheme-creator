@@ -31,15 +31,10 @@
     , "args":
       [ "--scheme_type"
       , "gnome"
-      //, "--background_color"
-      //, "0x1c1c1c"
-      //, "--foreground_color"
-      //, "0xd7005f"
-      //, "--rgb_list"
       , "--file"
       , "sample-themes/flux-dark.json"
-      //, "--out_dir"
-      //, "~/.themes/"
+      , "--name"
+      , "flux-dark"
       ]
     }
   , { "name": "vscode-cli"

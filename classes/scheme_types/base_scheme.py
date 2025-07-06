@@ -200,9 +200,16 @@ class ColorScheme():
     RGHT_ARROW: str =\
     '\u2192'
 
+    TABLE_LINE: str = '\n' + (76 * '-')
+
     # Print table header
-    header: str = ' Selected Background' +\
-      '\n               ' + DOWN_ARROW + '\n Alt opt  ' + RGHT_ARROW
+    header: str = str(
+      TABLE_LINE +
+      '\n Color    | Selected |              Color Scheme Preview with'
+      '\n Scheme   | Backgrnd |               Alternative Backgrounds'
+      + TABLE_LINE +
+      '\n RGB Vals |'
+    )
 
     header += RgbColor.construct_color_print_str\
       ( text=f' 0x{self.background_color_:06x} '
@@ -229,7 +236,7 @@ class ColorScheme():
     header +='\n----------'
 
     for i in range(len(bg_color_list)):
-      header += '|----------'
+      header += '-----------'
     print(header)
 
     colored_text: str = ''
