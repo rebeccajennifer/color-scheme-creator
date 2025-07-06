@@ -29,16 +29,36 @@ from utilities.color_scheme_utils import GeneralUtils as Utils
 
 class TestConst:
 
-  ALL_CAPS_2_CHAR: str = '0xFF'
-  MIX_CAPS_2_CHAR: str = '0xFf'
+  ALL_CAPS_2_CHAR_WITH_0X: str = '0xFF'
+  MIX_CAPS_2_CHAR_WITH_0X: str = '0xFf'
+
+  ALL_CAPS_2_CHAR_NO_PRFX: str = 'FF'
+  MIX_CAPS_2_CHAR_NO_PRFX: str = 'Ff'
 
   INT_2_CHAR: int = 255
 
 #_______________________________________________________________________
-def test_str_hex2int():
-
+def test_str_hex2int_all_caps_with_0x():
   assert(
-    Utils.str_hex_to_int(TestConst.ALL_CAPS_2_CHAR) ==\
+    Utils.str_hex_to_int(TestConst.ALL_CAPS_2_CHAR_WITH_0X) ==\
+    TestConst.INT_2_CHAR
+  )
+
+def test_str_hex2int_mix_caps_with_0x():
+  assert(
+    Utils.str_hex_to_int(TestConst.MIX_CAPS_2_CHAR_WITH_0X) ==\
+    TestConst.INT_2_CHAR
+  )
+
+def test_str_hex2int_all_caps_no_prfx():
+  assert(
+    Utils.str_hex_to_int(TestConst.ALL_CAPS_2_CHAR_NO_PRFX) ==\
+    TestConst.INT_2_CHAR
+  )
+
+def test_str_hex2int_mix_caps_no_prfx():
+  assert(
+    Utils.str_hex_to_int(TestConst.MIX_CAPS_2_CHAR_NO_PRFX) ==\
     TestConst.INT_2_CHAR
   )
 
