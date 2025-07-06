@@ -25,6 +25,8 @@
 # Tests for utility functions.
 #_______________________________________________________________________
 
+import pytest
+
 from utilities.color_scheme_utils import GeneralUtils as Utils
 
 #_______________________________________________________________________
@@ -43,8 +45,12 @@ class TestConst:
   ALL_CAPS_6_CHAR_NO_PRFX: str = 'FFFFFF'
   MIX_CAPS_6_CHAR_NO_PRFX: str = 'fFfFFf'
 
+  ERR_VAL_WITH_0X: str = '0x5g'
+
   INT_2_CHAR: int = 255
   INT_6_CHAR: int = 16777215
+
+  ERR_VAL: int = -1
 
 #_______________________________________________________________________
 def test_str_hex2int_all_caps_with_0x():
@@ -87,4 +93,10 @@ def test_str_hex2int_mix_caps_no_prfx():
     TestConst.INT_6_CHAR
   )
 
+#_______________________________________________________________________
+def test_str_hex2int_err():
+  with pytest.raises(Exception):
+    Utils.str_hex_to_int(TestConst.ERR_VAL_WITH_0X)
 
+#def test_str_hex2int_err_output():
+#  Utils.str_hex_to_int(TestConst.ERR_VAL_WITH_0X)

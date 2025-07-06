@@ -47,14 +47,14 @@ class GeneralUtils:
         return int(s, base=16)
 
     except Exception as error:
-      print(
+      err_msg: str =\
         f'{UtilErrors.ERROR_TYPE}'\
         f'{type(error).__name__}'\
         f'{UtilErrors.DESC}'\
         f'{UtilErrors.CONVERSION_ERROR}'\
         f'{UtilErrors.LINE}'\
-      )
-      return -1
+
+      raise ValueError(err_msg)
 
   #_____________________________________________________________________
   def str_list_to_hex_list(l: list[str]) -> list[int]:
