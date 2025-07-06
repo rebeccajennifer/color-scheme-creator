@@ -65,7 +65,7 @@ class RgbConst:
   DEFAULT_RGB_INT_LIST: list[int] =\
     Utils.str_list_to_hex_list(DEFAULT_RGB_STR_LIST.split())
 
-  GREYS_DARK: list =\
+  ANSI_256_DARK_GREYS: list =\
   [ 0x000000
   , 0x080808
   , 0x121212
@@ -81,7 +81,7 @@ class RgbConst:
   , 0x767676
   ]
 
-  GREYS_LITE: list =\
+  ANSI_256_LITE_GREYS: list =\
   [ 0x808080
   , 0x8a8a8a
   , 0x949494
@@ -136,3 +136,47 @@ class RgbColor:
       out_str = f'{out_str}\nColor {i:02}: 0x{l[i]:06x}'
 
     return out_str
+
+  #_____________________________________________________________________
+  def print_with_color(text: str
+    , fg: int = 0
+    , bg: int = -1
+  ) -> None:
+    """
+    Calls utility function to print colored text.
+
+    Parameters
+    text - text to print
+    fg   - foreground color range[0x000000-0xFFFFFF]
+    bg   - background color range[0x000000-0xFFFFFF]
+    """
+
+    # Convert rgb ints to dicts
+    fg= RgbColor.get_rgb_from_hex(fg)
+    bg= RgbColor.get_rgb_from_hex(bg)
+
+    fg_red: int = fg[RgbConst.RED_STR]
+    fg_grn: int = fg[RgbConst.GRN_STR]
+    fg_blu: int = fg[RgbConst.BLU_STR]
+    bg_red: int = bg[RgbConst.RED_STR]
+    bg_grn: int = bg[RgbConst.GRN_STR]
+    bg_blu: int = bg[RgbConst.BLU_STR]
+
+
+    # Used in print color utility function
+    # -1 indicates to print no background color
+    if (bg == -1):
+      bg_red: int = -1
+      bg_grn: int = -1
+      bg_blu: int = -1
+
+    Utils.print_with_color(text=text
+    , fg_red=fg_red
+    , fg_grn=fg_grn
+    , fg_blu=fg_blu
+    , bg_red=bg_red
+    , bg_grn=bg_grn
+    , bg_blu=bg_blu
+    )
+
+    return

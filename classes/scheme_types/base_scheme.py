@@ -37,11 +37,20 @@ from utilities.color_scheme_utils import GeneralUtils as Utils
 #_______________________________________________________________________
 class ColorScheme():
 
-  BACKGROUND_COLOR: str = "background-color"
-  FOREGROUND_COLOR: str = "foreground-color"
-  PALETTE: str = "palette"
+  BACKGROUND_COLOR: str = 'background-color'
+  FOREGROUND_COLOR: str = 'foreground-color'
+  PALETTE: str = 'palette'
 
-  PALETTE_COLOR_COUNT: int = 8
+  PREVIEW: str = str(
+    '\n-------------------'
+    '\n Your Color Scheme'
+    '\n'
+  )
+  ALT_PREV: str = str(
+    '\n-------------------------'
+    '\n Alternative Backgrounds'
+    '\n'
+  )
 
   #_____________________________________________________________________
   def __init__(self, *arg):
@@ -171,17 +180,36 @@ class ColorScheme():
     Prints color scheme to console as colored text.
     """
 
+    bg: int = self.background_color_
+
     bg_rgb: dict = RgbColor.get_rgb_from_hex(self.background_color_)
 
+    # Flag to determine if background color is light or dark
+    is_lite_bg: bool = self.background_color_ >= 0x808080
+
+    if (is_lite_bg):
+      greyscale_list: list = RgbConst.ANSI_256_LITE_GREYS
+    else:
+      greyscale_list: list = RgbConst.ANSI_256_DARK_GREYS
+
+    print(self.PREVIEW)
+
+    # Print table header
+    header: str = f' Backgnd  | 0x{bg:06x}'
+
+    for grey in greyscale_list:
+      header += f' | 0x{grey:06x}'
+
+    print(header)
+
+    f' Color -- | 0x-------'
+    f'----------|----------'
+    #___________________________________________________________________
     for i in range(0, len(self.palette_)):
-      rgb_dict: dict = RgbColor.get_rgb_from_hex(self.palette_[i])
-      Utils.print_with_color(text=f'Color {i:2d}'
-        , fg_red=rgb_dict[RgbConst.RED_STR]
-        , fg_grn=rgb_dict[RgbConst.GRN_STR]
-        , fg_blu=rgb_dict[RgbConst.BLU_STR]
-        , bg_red=bg_rgb[RgbConst.RED_STR]
-        , bg_grn=bg_rgb[RgbConst.GRN_STR]
-        , bg_blu=bg_rgb[RgbConst.BLU_STR]
+      crnt_color: int = self.palette_[i]
+      RgbColor.print_with_color(text=f' Color {i:2d} | 0x{crnt_color:06x}'
+        , fg=crnt_color
+        , bg=self.background_color_
       )
 
     return

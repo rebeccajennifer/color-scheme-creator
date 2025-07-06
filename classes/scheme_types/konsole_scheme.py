@@ -12,7 +12,7 @@
 #  -------------------------------
 #  This code may be copied, redistributed, transformed, or built upon in
 #  any format for educational, non-commercial purposes.
-# 
+#
 #  Please give me appropriate credit should you choose to modify this
 #  code. Thank you :)
 #-----------------------------------------------------------------------
@@ -38,6 +38,7 @@ class KonsoleScheme(ColorScheme):
   INTENSE_BOLD: str  = 'intense-bold'
   BACKGROUND_COLOR_INTENSE: str = 'background-color-intense'
   FOREGROUND_COLOR_INTENSE: str = 'foreground-color-intense'
+  PALETTE_COLOR_COUNT: int = 8
 
   def __init__(self, *arg):
     """
@@ -104,7 +105,7 @@ class KonsoleScheme(ColorScheme):
 
     self.label_list_: list[str] = ['Background', 'BackgroundIntense']
 
-    for i in range(ColorScheme.PALETTE_COLOR_COUNT):
+    for i in range(self.PALETTE_COLOR_COUNT):
       self.label_list_.append(f'Color{i}')
       self.label_list_.append(f'Color{i}Intense')
 

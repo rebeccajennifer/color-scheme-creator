@@ -182,10 +182,17 @@ class GeneralUtils:
     Prints text to screen with defined foreground color.
 
     Parameters
+    text - text to print
     fg_red  - foreground red value in RGB range[0-255]
     fg_grn  - foreground grn value in RGB range[0-255]
     fg_blu  - foreground blu value in RGB range[0-255]
-    text - text to print
+
+    bg_red  - background red value in RGB range[0-255]
+              -1 indicates no background color
+    bg_grn  - background grn value in RGB range[0-255]
+              -1 indicates no background color
+    bg_blu  - background blu value in RGB range[0-255]
+              -1 indicates no background color
     """
 
     # Background color
