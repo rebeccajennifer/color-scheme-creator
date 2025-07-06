@@ -202,7 +202,7 @@ class ColorScheme():
 
     # Print table header
     header: str = ' Selected Background' +\
-      '\n               ' + DOWN_ARROW + '\n Options ' + RGHT_ARROW + ' '
+      '\n               ' + DOWN_ARROW + '\n Alt opt  ' + RGHT_ARROW
 
     header += RgbColor.construct_color_print_str\
       ( text=f' 0x{self.background_color_:06x} '
