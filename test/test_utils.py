@@ -22,20 +22,29 @@
 #_______________________________________________________________________
 
 #_______________________________________________________________________
-# Test file for module
+# Tests for utility functions.
 #_______________________________________________________________________
 
 from utilities.color_scheme_utils import GeneralUtils as Utils
 
+#_______________________________________________________________________
 class TestConst:
+  """
+  Contains constants used in tests.
+  """
 
   ALL_CAPS_2_CHAR_WITH_0X: str = '0XFF'
   MIX_CAPS_2_CHAR_WITH_0X: str = '0xFf'
+  ALL_CAPS_6_CHAR_WITH_0X: str = '0XFFFFFF'
+  MIX_CAPS_6_CHAR_WITH_0X: str = '0xFfFFff'
 
   ALL_CAPS_2_CHAR_NO_PRFX: str = 'FF'
-  MIX_CAPS_2_CHAR_NO_PRFX: str = 'Ff'
+  MIX_CAPS_2_CHAR_NO_PRFX: str = 'fF'
+  ALL_CAPS_6_CHAR_NO_PRFX: str = 'FFFFFF'
+  MIX_CAPS_6_CHAR_NO_PRFX: str = 'fFfFFf'
 
   INT_2_CHAR: int = 255
+  INT_6_CHAR: int = 16777215
 
 #_______________________________________________________________________
 def test_str_hex2int_all_caps_with_0x():
@@ -43,11 +52,19 @@ def test_str_hex2int_all_caps_with_0x():
     Utils.str_hex_to_int(TestConst.ALL_CAPS_2_CHAR_WITH_0X) ==\
     TestConst.INT_2_CHAR
   )
+  assert(
+    Utils.str_hex_to_int(TestConst.ALL_CAPS_6_CHAR_WITH_0X) ==\
+    TestConst.INT_6_CHAR
+  )
 
 def test_str_hex2int_mix_caps_with_0x():
   assert(
     Utils.str_hex_to_int(TestConst.MIX_CAPS_2_CHAR_WITH_0X) ==\
     TestConst.INT_2_CHAR
+  )
+  assert(
+    Utils.str_hex_to_int(TestConst.MIX_CAPS_6_CHAR_WITH_0X) ==\
+    TestConst.INT_6_CHAR
   )
 
 def test_str_hex2int_all_caps_no_prfx():
@@ -55,11 +72,19 @@ def test_str_hex2int_all_caps_no_prfx():
     Utils.str_hex_to_int(TestConst.ALL_CAPS_2_CHAR_NO_PRFX) ==\
     TestConst.INT_2_CHAR
   )
+  assert(
+    Utils.str_hex_to_int(TestConst.ALL_CAPS_6_CHAR_NO_PRFX) ==\
+    TestConst.INT_6_CHAR
+  )
 
 def test_str_hex2int_mix_caps_no_prfx():
   assert(
     Utils.str_hex_to_int(TestConst.MIX_CAPS_2_CHAR_NO_PRFX) ==\
     TestConst.INT_2_CHAR
+  )
+  assert(
+    Utils.str_hex_to_int(TestConst.MIX_CAPS_6_CHAR_NO_PRFX) ==\
+    TestConst.INT_6_CHAR
   )
 
 
