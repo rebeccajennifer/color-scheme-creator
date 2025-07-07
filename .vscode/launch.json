@@ -23,7 +23,7 @@
 
 { "version":        "0.2.0"
 , "configurations":
-  [ { "name": "command-line-input"
+  [ { "name": "gnome-flux-dark-linux"
     , "type": "debugpy"
     , "request": "launch"
     , "program": "${workspaceFolder}/color_scheme_driver.py"
@@ -37,6 +37,21 @@
       , "flux-dark"
       ]
     }
+  , { "name": "gnome-flux-lite-linux"
+    , "type": "debugpy"
+    , "request": "launch"
+    , "program": "${workspaceFolder}/color_scheme_driver.py"
+    , "console": "integratedTerminal"
+    , "args":
+      [ "--scheme_type"
+      , "gnome"
+      , "--file"
+      , "sample-themes/flux-lite.json"
+      , "--name"
+      , "flux-lite"
+      ]
+    }
+
   , { "name": "vscode-cli"
     , "type": "debugpy"
     , "request": "launch"
