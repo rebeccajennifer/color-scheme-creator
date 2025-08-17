@@ -33,6 +33,9 @@ from utilities.color_scheme_utils import GeneralUtils as Utils
 
 #_______________________________________________________________________
 class KonsoleScheme(ColorScheme):
+  """
+  Used to generate a color scheme file for Konsole.
+  """
 
   OUT_EXT: str = 'colorscheme'
   INTENSE_BOLD: str  = 'intense-bold'

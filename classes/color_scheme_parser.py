@@ -13,7 +13,7 @@
 #  -------------------------------
 #  This code may be copied, redistributed, transformed, or built upon in
 #  any format for educational, non-commercial purposes.
-# 
+#
 #  Please give me appropriate credit should you choose to modify this
 #  code. Thank you :)
 #-----------------------------------------------------------------------
@@ -55,6 +55,7 @@ class ParserStrings:
     [ 'gnome'
     , 'konsole'
     , 'vscode-term'
+    , 'all'
     ]
 
   CMD_LINE_ENTRY_GROUP_TITLE: str =\

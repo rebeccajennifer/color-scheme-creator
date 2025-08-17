@@ -36,6 +36,10 @@ from utilities.color_scheme_utils import GeneralUtils as Utils
 
 #_______________________________________________________________________
 class ColorScheme():
+  """
+  Contains base functionality to generate color schemes. This class
+  cannot be used on its own - it must be inherited by a derived class.
+  """
 
   BACKGROUND_COLOR: str = 'background-color'
   FOREGROUND_COLOR: str = 'foreground-color'
