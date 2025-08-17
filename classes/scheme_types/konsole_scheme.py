@@ -43,6 +43,11 @@ class KonsoleScheme(ColorScheme):
   FOREGROUND_COLOR_INTENSE: str = 'foreground-color-intense'
   PALETTE_COLOR_COUNT: int = 8
 
+  COMPLETION_TEXT: str =str (
+    '\nUser created Konsole color themes are often saved to:'
+    '\n~/.local/share/konsole/'
+  )
+
   def __init__(self, *arg):
     """
     Constructor, takes additional argument to base class.

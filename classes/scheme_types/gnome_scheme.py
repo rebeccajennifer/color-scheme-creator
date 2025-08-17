@@ -37,6 +37,12 @@ class GnomeScheme(ColorScheme):
 
   OUT_EXT: str = 'dconf'
 
+  COMPLETION_TEXT: str =str (
+    '\nGNOME terminal themes are often saved to:'
+    '\n~/.themes'
+  )
+
+  #_____________________________________________________________________
   def __init__(self, *arg):
     """
     Constructor

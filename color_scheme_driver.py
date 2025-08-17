@@ -12,7 +12,7 @@
 #  -------------------------------
 #  This code may be copied, redistributed, transformed, or built upon in
 #  any format for educational, non-commercial purposes.
-# 
+#
 #  Please give me appropriate credit should you choose to modify this
 #  code. Thank you :)
 #-----------------------------------------------------------------------
@@ -60,6 +60,9 @@ if __name__ == '__main__':
 
   args: argparse.Namespace = parser.parse_args()
 
+  scheme_name : str = args.name
+  out_dir     : str = args.out_dir
+
   if (args.scheme_type == ParserStrings.GNOME_INPUT):
     SchemeType = GnomeScheme
 
@@ -74,7 +77,8 @@ if __name__ == '__main__':
 
   # Data in file overrides all other arguments
   if(args.file):
-    color_scheme = SchemeType(Utils.read_hex_color_json(args.file))
+    color_scheme = SchemeType(
+      args.name, args.out_dir, Utils.read_hex_color_json(args.file))
 
   else:
     color_scheme =\
@@ -83,14 +87,5 @@ if __name__ == '__main__':
         , args.rgb_list)
 
   color_scheme.write_file(args.out_dir)
-
-  print(f'{ColorSchemeStrings.LINE}\n\n')
-  print(ColorSchemeStrings.OUTPUT_STR)
-  print(f'{ColorSchemeStrings.LINE}\n')
-
-  if (SchemeType == VsCodeTermScheme):
-    print(VsCodeTermScheme.VSCODE_DESCR)
-
-  print(color_scheme.color_scheme_str_)
-  print(f'{ColorSchemeStrings.LINE}\n\n')
+  color_scheme.on_completion()
   color_scheme.print_color_scheme()

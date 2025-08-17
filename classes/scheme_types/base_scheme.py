@@ -27,7 +27,7 @@
 
 from os import path
 
-from classes.color_scheme_strings import ColorSchemeStrings
+from classes.color_scheme_strings import ColorSchemeStrings as Strings
 from classes.color_scheme_strings import ErrorStrings
 from classes.rgb_color import RgbColor
 from classes.rgb_color import RgbConst
@@ -46,7 +46,8 @@ class ColorScheme():
   PALETTE: str = 'palette'
 
   PREVIEW: str = str(
-    '\n-------------------'
+    f'\n{Strings.LINE}'
+    f'\n{Strings.LINE}'
     '\n Your Color Scheme'
     '\n'
   )
@@ -56,13 +57,15 @@ class ColorScheme():
     '\n'
   )
 
+  COMPLETION_TEXT: str = Strings.OUTPUT_STR
+
   #_____________________________________________________________________
-  def __init__(self, *arg):
+  def __init__(self, name: str = Strings.DEFAULT_NAME, out_dir: str = '.', *arg):
 
     self.background_color_ = RgbConst.DEFAULT_BACKGROUND
     self.foreground_color_ = RgbConst.DEFAULT_FOREGROUND
     self.palette_ = RgbConst.DEFAULT_RGB_INT_LIST
-    self.name_ = ColorSchemeStrings.DEFAULT_NAME
+    self.name_ = name
 
     #___________________________________________________________________
     # Default with no arguments
@@ -87,7 +90,8 @@ class ColorScheme():
 
     #___________________________________________________________________
     # Third argument is assumed to be a string containing white space
-    # separated hex int strings, used when command line input.
+    # separated hex int strings, used when command line input. E.g.
+    # TODO add example
     #___________________________________________________________________
     if (len(arg) > 2):
       try:
@@ -101,6 +105,18 @@ class ColorScheme():
       except TypeError:
         pass
 
+    self.out_file_name_: str =\
+      f'{self.name_}.{self.OUT_EXT}'
+
+
+    if path.isdir(out_dir):
+
+      # TODO raise exception instead
+      if (not path.isdir(out_dir)):
+        input(f'{ErrorStrings.INVALID_DIR}{Strings.CONTINUE}')
+      else:
+          self.out_file_path_ = path.join(out_dir, self.out_file_name_)
+
     return
 
   #_____________________________________________________________________
@@ -111,6 +127,7 @@ class ColorScheme():
 
     #___________________________________________________________________
     try:
+      # Ensure file names have no spaces
       self.name_ = input_dict['name'].replace(' ', '-')
     except:
       pass
@@ -164,19 +181,11 @@ class ColorScheme():
     out_dir - path to directory
     """
 
-    if path.isdir(out_dir):
+    f = open(self.out_file_path_, 'w')
+    f.write(self.color_scheme_str_)
+    f.close()
 
-      out_file_path: str =\
-        f'{self.name_}.{self.OUT_EXT}'
-
-      if (not path.isdir(out_dir)):
-        input(f'{ErrorStrings.INVALID_DIR}{ColorSchemeStrings.CONTINUE}')
-      else:
-          out_file_path = path.join(out_dir, out_file_path)
-
-      f = open(out_file_path, 'w')
-      f.write(self.color_scheme_str_)
-      f.close()
+    return
 
   #_____________________________________________________________________
   def print_color_scheme(self) -> None:
@@ -185,8 +194,6 @@ class ColorScheme():
     """
 
     bg: int = self.background_color_
-
-    bg_rgb: dict = RgbColor.get_rgb_from_hex(self.background_color_)
 
     # Flag to determine if background color is light or dark
     is_lite_bg: bool = self.background_color_ >= 0x808080
@@ -197,12 +204,6 @@ class ColorScheme():
       greyscale_list: list = RgbConst.ANSI_256_DARK_GREYS
 
     print(self.PREVIEW)
-
-    DOWN_ARROW: str =\
-    '\u2193'
-
-    RGHT_ARROW: str =\
-    '\u2192'
 
     TABLE_LINE: str = '\n' + (76 * '-')
 
@@ -236,7 +237,6 @@ class ColorScheme():
         , bg=color
         )
 
-
     header +='\n----------'
 
     for i in range(len(bg_color_list)):
@@ -244,6 +244,7 @@ class ColorScheme():
     print(header)
 
     colored_text: str = ''
+
     #___________________________________________________________________
     for i in range(0, len(self.palette_)):
       crnt_color: int = self.palette_[i]
@@ -267,3 +268,22 @@ class ColorScheme():
     print(colored_text)
 
     return
+
+  #_____________________________________________________________________
+  def on_completion(self):
+    """
+    Prints upon completion.
+    """
+
+    completion_text: str = str (
+      f'\n{Strings.LINE}'
+      f'\n{Strings.OUTPUT_STR}'
+      f'\n{self.out_file_path_}'
+      f'\n{Strings.LINE}'
+      f'\n'
+      f'\n{self.color_scheme_str_}'
+      f'\n{Strings.LINE}'
+      f'\n{self.COMPLETION_TEXT}'
+    )
+
+    print(completion_text)

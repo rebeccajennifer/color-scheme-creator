@@ -12,7 +12,7 @@
 #  -------------------------------
 #  This code may be copied, redistributed, transformed, or built upon in
 #  any format for educational, non-commercial purposes.
-# 
+#
 #  Please give me appropriate credit should you choose to modify this
 #  code. Thank you :)
 #-----------------------------------------------------------------------
@@ -25,10 +25,10 @@
 # Visual Studio Terminal color scheme
 #_______________________________________________________________________
 
+from platform import system
 from classes.scheme_types.base_scheme import ColorScheme
 
-from platform import system
-from utilities.color_scheme_utils import GeneralUtils as Utils
+from classes.color_scheme_strings import ColorSchemeStrings as Strings
 
 
 #_______________________________________________________________________
@@ -46,16 +46,18 @@ class VsCodeTermScheme(ColorScheme):
 
   if system() == 'Windows':
     settings_path = WIN_SETTINGS_LOCATION
-    
+
   else:
     settings_path = LINUX_SETTINGS_LOCATION
 
-  VSCODE_DESCR: str =\
-    '\nCopy the following text to your settings.json file.'\
-    '\n'\
-    f'\nOn a {system()} system, settings.json is usually located:'\
-    f'\n{settings_path}'\
+  COMPLETION_TEXT: str =str (
+    '\nCopy the text from the output file and add to settings.json.'
     '\n'
+    f'\nOn a {system()} system, your user settings.json is usually located:'
+    f'\n{settings_path}'
+    f'\n{Strings.LINE}'
+    '\n'
+  )
 
   COLOR_NAMES: list[str] = ['ansiBlack'
     , 'ansiRed'
@@ -92,7 +94,6 @@ class VsCodeTermScheme(ColorScheme):
 
     self.color_scheme_str_: str = self.create_color_scheme_str()
 
-
     return
 
   #_____________________________________________________________________
@@ -101,8 +102,13 @@ class VsCodeTermScheme(ColorScheme):
     Creates color scheme string to be printed to a file.
     """
 
-    out_str: str =\
-      '\n  "workbench.colorCustomizations": {"terminal.background": '
+    space_length: int =\
+      VsCodeTermScheme.COLOR_FIELD_WIDTH - len('background')
+
+    out_str: str = str(
+      '  "workbench.colorCustomizations":'
+      f'\n  {{ "terminal.background"{': ':>{space_length}}'
+      )
 
     foreground: str = "foreground"
 
@@ -112,7 +118,7 @@ class VsCodeTermScheme(ColorScheme):
     out_str = f'{out_str}"#{self.background_color_:06x}"'
 
     out_str = f'{out_str}'\
-      f'\n    , "terminal.{foreground}"{": ":>{space_length}}'\
+      f'\n  , "terminal.{foreground}"{": ":>{space_length}}'\
       f'"#{self.foreground_color_:06x}"'
 
     #___________________________________________________________________
@@ -127,11 +133,11 @@ class VsCodeTermScheme(ColorScheme):
         VsCodeTermScheme.COLOR_FIELD_WIDTH - len(colors[i])
 
       out_str = f'{out_str}'\
-        f'\n    , "terminal.{colors[i]}"{": ":>{space_length}}'\
+        f'\n  , "terminal.{colors[i]}"{": ":>{space_length}}'\
         f'"#{self.palette_[i]:06x}"'
 
     out_str = f'{out_str}\n'\
-      r'}'
+      f'  }}'
     #___________________________________________________________________
 
     return out_str
