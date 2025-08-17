@@ -60,7 +60,9 @@ class ColorScheme():
   COMPLETION_TEXT: str = Strings.OUTPUT_STR
 
   #_____________________________________________________________________
-  def __init__(self, name: str = Strings.DEFAULT_NAME, out_dir: str = '.', *arg):
+  def __init__(self
+    , name: str = Strings.DEFAULT_NAME
+    , out_dir: str = '.', *arg):
 
     self.background_color_ = RgbConst.DEFAULT_BACKGROUND
     self.foreground_color_ = RgbConst.DEFAULT_FOREGROUND

@@ -48,6 +48,7 @@ class KonsoleScheme(ColorScheme):
     '\n~/.local/share/konsole/'
   )
 
+  #_____________________________________________________________________
   def __init__(self, *arg):
     """
     Constructor, takes additional argument to base class.
