@@ -63,6 +63,18 @@
       //, "--out_dir"     , "~/.themes"
       ]
     }
+  , { "name"    : "mintty-flux-dark"
+    , "type"    : "debugpy"
+    , "request" : "launch"
+    , "program" : "${workspaceFolder}/color_scheme_driver.py"
+    , "console" : "integratedTerminal"
+    , "args"    :
+      [ "--scheme_type" , "mintty"
+      , "--file"        , "sample-themes/flux-dark.json"
+      , "--name"        , "flux-dark"
+      , "--out_dir"     , "${workspaceFolder}/sample-themes"
+      ]
+    }
   , { "name"    : "konsole-flux-dark-linux"
     , "type"    : "debugpy"
     , "request" : "launch"
@@ -117,5 +129,4 @@
       , "--name"        , "default"
       ]
     }
-  ]
 }

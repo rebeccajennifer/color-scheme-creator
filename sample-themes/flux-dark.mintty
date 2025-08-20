@@ -1,0 +1,26 @@
+
+#________________________________________________________________
+#
+# Mintty color scheme file created by Color Scheme Creator.
+# Script Author: Rebecca Jennifer
+#
+# Save as '.minttyrc' in your home directory to use.
+#________________________________________________________________
+
+
+  Black         = #121212
+  Red           = #d75f87
+  Green         = #87d75f
+  Yellow        = #d7875f
+  Blue          = #5f87d7
+  Magenta       = #af5fd7
+  Cyan          = #5fd7af
+  White         = #d7d7d7
+  BoldBlack     = #181818
+  BoldRed       = #ff5f87
+  BoldGreen     = #87ff5f
+  BoldYellow    = #ff875f
+  BoldBlue      = #5f87ff
+  BoldMagenta   = #af5fff
+  BoldCyan      = #5fffaf
+  BoldWhite     = #eeeeee

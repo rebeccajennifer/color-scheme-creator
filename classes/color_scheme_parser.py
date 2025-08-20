@@ -55,6 +55,7 @@ class ParserStrings:
     [ 'gnome'
     , 'konsole'
     , 'vscode-term'
+    , 'mintty'
     , 'all'
     ]
 
@@ -115,6 +116,7 @@ class ParserStrings:
   GNOME_INPUT: str = 'gnome'
   KONSOLE_INPUT: str = 'konsole'
   VSCODE_TERM_INPUT: str = 'vscode-term'
+  MINTTY_INPUT: str = 'mintty'
 
   COLOR_RANGE: str = '{0x000000-0xFFFFFF}'
 

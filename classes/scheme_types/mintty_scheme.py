@@ -27,6 +27,8 @@
 
 from classes.scheme_types.base_scheme import ColorScheme
 from classes.rgb_color import RgbConst, RgbColor
+from utilities.color_scheme_utils import GeneralUtils as Utils
+from classes.color_scheme_strings import ColorSchemeStrings as Strings
 
 
 #_______________________________________________________________________
@@ -35,13 +37,25 @@ class MinttyScheme(ColorScheme):
   Used to generate a color scheme file for Mintty and Cygwin.
   """
 
-  OUT_EXT: str = '.mintty'
+  OUT_EXT: str = 'mintty'
 
   COMPLETION_TEXT: str =str (
     '\nFor your color scheme file to take effect in Mintty or Cygwin, '
     '\nsave your file as \'.minttyrc\' and save to your home '
     '\ndirectory,'
     '\n~/'
+  )
+
+  HEADER_COMMENT: str = (
+    '\n#' +
+    Strings.LINE +
+    '\n#' +
+    '\n# Mintty color scheme file created by Color Scheme Creator.'
+    '\n# Script Author: Rebecca Jennifer'
+    '\n#'
+    '\n# Save as \'.minttyrc\' in your home directory to use.'
+    '\n#' +
+    Strings.LINE
   )
 
   # Color names mapped by position to the ANSI 16 color indices (0–15)
@@ -65,57 +79,24 @@ class MinttyScheme(ColorScheme):
   ]
 
   #_____________________________________________________________________
-  def create_color_entry(rgb_map: dict) -> str:
-
-    red: int = rgb_map[RgbConst.RED_STR]
-    grn: int = rgb_map[RgbConst.GRN_STR]
-    blu: int = rgb_map[RgbConst.BLU_STR]
-
-    out_str: str =\
-      f"'rgb({red}, {grn}, {blu})'"
-
-    return out_str
-
-  #_____________________________________________________________________
   def create_color_scheme_str(self) -> str:
     """
-    Creates Gnome color scheme string to be printed to a file.
+    Creates color scheme string to be printed to a file.
     """
 
-    BACKGND: str = ColorScheme.BACKGROUND_COLOR
-    FOREGND: str = ColorScheme.FOREGROUND_COLOR
-    PALETTE: str = ColorScheme.PALETTE
+    if (len(self.palette_) != len(self.COLOR_NAME_LIST)):
+      print("Color palette created does not have the correct number of entries")
 
-    backgnd: dict = RgbColor.get_rgb_from_hex(self.background_color_)
-    foregnd: dict = RgbColor.get_rgb_from_hex(self.foreground_color_)
+    out_str: str = self.HEADER_COMMENT + '\n\n'
 
-    out_str: str = \
-      '[/]'\
-      f'\n{BACKGND}={GnomeScheme.create_color_entry(backgnd)}'\
-      f'\n{FOREGND}={GnomeScheme.create_color_entry(foregnd)}'\
-      f'\n{PALETTE}=[{self.create_palette_str()}]'
+    # Used to line up values in column form
+    color_field_width: int =\
+      2 + max(len(x) for x in self.COLOR_NAME_LIST)
+
+    for i in range(0, len(self.palette_)):
+      crnt_color: int = self.palette_[i]
+
+      out_str = out_str + f'\n  {self.COLOR_NAME_LIST[i]:<{color_field_width}} = #{Utils.int_to_hex6(crnt_color)}'
+
 
     return out_str
-
-  #_____________________________________________________________________
-  def create_palette_str(self) -> str:
-    """
-    Creates string for color palette.
-    """
-
-    out_str: str = ''
-
-    palette: list[int] = self.palette_
-
-    for i in range(len(palette)):
-      color: int = palette[i]
-      rgb_dict: dict = RgbColor.get_rgb_from_hex(color)
-      color_entry: str = GnomeScheme.create_color_entry(rgb_dict)
-
-      out_str = f'{out_str}{color_entry}'
-
-      if (i != len(palette) - 1):
-        out_str = f'{out_str},'
-
-    return out_str
-
