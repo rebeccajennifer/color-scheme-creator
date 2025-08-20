@@ -43,17 +43,6 @@ class GnomeScheme(ColorScheme):
   )
 
   #_____________________________________________________________________
-  def __init__(self, *arg):
-    """
-    Constructor
-    """
-
-    super(GnomeScheme, self).__init__(*arg)
-    self.color_scheme_str_: str = self.create_color_scheme_str()
-
-    return
-
-  #_____________________________________________________________________
   def create_color_entry(rgb_map: dict) -> str:
 
     red: int = rgb_map[RgbConst.RED_STR]

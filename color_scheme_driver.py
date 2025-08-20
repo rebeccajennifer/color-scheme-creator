@@ -29,7 +29,6 @@ import argparse
 
 from classes.color_scheme_parser import ColorSchemeParser
 from classes.color_scheme_parser import ParserStrings
-from classes.color_scheme_strings import ColorSchemeStrings
 
 from classes.scheme_types.gnome_scheme import GnomeScheme
 from classes.scheme_types.konsole_scheme import KonsoleScheme

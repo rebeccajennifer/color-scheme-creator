@@ -38,22 +38,31 @@ class MinttyScheme(ColorScheme):
   OUT_EXT: str = '.mintty'
 
   COMPLETION_TEXT: str =str (
-    '\nThe your color scheme file to take effect in Mintty or Cygwin, '
+    '\nFor your color scheme file to take effect in Mintty or Cygwin, '
     '\nsave your file as \'.minttyrc\' and save to your home '
     '\ndirectory,'
     '\n~/'
   )
 
-  #_____________________________________________________________________
-  def __init__(self, *arg):
-    """
-    Constructor
-    """
-
-    super(MinttyScheme, self).__init__(*arg)
-    self.color_scheme_str_: str = self.create_color_scheme_str()
-
-    return
+  # Color names mapped by position to the ANSI 16 color indices (0–15)
+  COLOR_NAME_LIST: list =\
+  [ "Black"
+  , "Red"
+  , "Green"
+  , "Yellow"
+  , "Blue"
+  , "Magenta"
+  , "Cyan"
+  , "White"
+  , "BoldBlack"
+  , "BoldRed"
+  , "BoldGreen"
+  , "BoldYellow"
+  , "BoldBlue"
+  , "BoldMagenta"
+  , "BoldCyan"
+  , "BoldWhite"
+  ]
 
   #_____________________________________________________________________
   def create_color_entry(rgb_map: dict) -> str:

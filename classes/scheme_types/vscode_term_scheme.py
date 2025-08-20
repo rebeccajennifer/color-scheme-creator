@@ -82,21 +82,6 @@ class VsCodeTermScheme(ColorScheme):
     2 + max(len(x) for x in COLOR_NAMES)
 
   #_____________________________________________________________________
-  def __init__(self, *arg):
-    """
-    Constructor, takes additional argument to base class.
-
-    Parameters
-    intense_bold - set intense colors to appear bold, presence in json
-                   file input takes precedence
-    """
-    super(VsCodeTermScheme, self).__init__(*arg)
-
-    self.color_scheme_str_: str = self.create_color_scheme_str()
-
-    return
-
-  #_____________________________________________________________________
   def create_color_scheme_str(self) -> str:
     """
     Creates color scheme string to be printed to a file.

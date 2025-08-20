@@ -119,6 +119,9 @@ class ColorScheme():
       else:
           self.out_file_path_ = path.join(out_dir, self.out_file_name_)
 
+
+    self.color_scheme_str_: str = self.create_color_scheme_str()
+
     return
 
   #_____________________________________________________________________
@@ -289,3 +292,10 @@ class ColorScheme():
     )
 
     print(completion_text)
+
+  #_____________________________________________________________________
+  def create_color_scheme_str(self):
+    """
+    Must be implemented by derived classes.
+    """
+    return
