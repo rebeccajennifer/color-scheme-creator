@@ -21,6 +21,8 @@
 #  //\^.^/\\   //\^.^/\\   //\^.^/\\   //\^.^/\\   //\^.^/\\   //\^.^/\\
 #_______________________________________________________________________
 
+# TODO need to fix to work with base class
+
 #_______________________________________________________________________
 # Konsole color scheme
 #_______________________________________________________________________
@@ -33,6 +35,9 @@ from utilities.color_scheme_utils import GeneralUtils as Utils
 
 #_______________________________________________________________________
 class KonsoleScheme(ColorScheme):
+  """
+  Used to generate a color scheme file for Konsole.
+  """
 
   OUT_EXT: str = 'colorscheme'
   INTENSE_BOLD: str  = 'intense-bold'
@@ -40,6 +45,12 @@ class KonsoleScheme(ColorScheme):
   FOREGROUND_COLOR_INTENSE: str = 'foreground-color-intense'
   PALETTE_COLOR_COUNT: int = 8
 
+  COMPLETION_TEXT: str =str (
+    '\nUser created Konsole color themes are often saved to:'
+    '\n~/.local/share/konsole/'
+  )
+
+  #_____________________________________________________________________
   def __init__(self, *arg):
     """
     Constructor, takes additional argument to base class.

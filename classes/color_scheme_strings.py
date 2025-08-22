@@ -12,7 +12,7 @@
 #  -------------------------------
 #  This code may be copied, redistributed, transformed, or built upon in
 #  any format for educational, non-commercial purposes.
-# 
+#
 #  Please give me appropriate credit should you choose to modify this
 #  code. Thank you :)
 #-----------------------------------------------------------------------
@@ -39,7 +39,7 @@ class ColorSchemeStrings:
     '\n'
 
   OUTPUT_STR: str =\
-    'The following text will be printed to the output file: '\
+    '\nThe following text will be printed to the output file: '\
     '\n'
 
   DEFAULT_NAME: str =\

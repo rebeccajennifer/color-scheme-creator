@@ -13,7 +13,7 @@
 #  -------------------------------
 #  This code may be copied, redistributed, transformed, or built upon in
 #  any format for educational, non-commercial purposes.
-# 
+#
 #  Please give me appropriate credit should you choose to modify this
 #  code. Thank you :)
 #-----------------------------------------------------------------------
@@ -55,6 +55,8 @@ class ParserStrings:
     [ 'gnome'
     , 'konsole'
     , 'vscode-term'
+    , 'mintty'
+    , 'all'
     ]
 
   CMD_LINE_ENTRY_GROUP_TITLE: str =\
@@ -114,6 +116,7 @@ class ParserStrings:
   GNOME_INPUT: str = 'gnome'
   KONSOLE_INPUT: str = 'konsole'
   VSCODE_TERM_INPUT: str = 'vscode-term'
+  MINTTY_INPUT: str = 'mintty'
 
   COLOR_RANGE: str = '{0x000000-0xFFFFFF}'
 

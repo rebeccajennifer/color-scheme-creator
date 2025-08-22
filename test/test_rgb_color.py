@@ -46,3 +46,5 @@ def test_get_rgb_from_hex():
   rgb_dict = RgbColor.get_rgb_from_hex(TestConst.COLOR_INT)
 
   assert rgb_dict[RgbConst.RED_STR] == TestConst.RED_VAL
+  assert rgb_dict[RgbConst.GRN_STR] == TestConst.GRN_VAL
+  assert rgb_dict[RgbConst.BLU_STR] == TestConst.BLU_VAL

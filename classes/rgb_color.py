@@ -42,25 +42,28 @@ class RgbConst:
   GRN_RIGHT_SHIFT: int = 8
   BLU_RIGHT_SHIFT: int = 0
 
+  DEFAULT_CURSOR_COL: int = 0x808080
   DEFAULT_BACKGROUND: int = 0x1c1c1c
   DEFAULT_FOREGROUND: int = 0xeeeeee
 
-  DEFAULT_RGB_STR_LIST: list[str] = '0x202020'\
-      ' 0x800000'\
-      ' 0x008000'\
-      ' 0x808000'\
-      ' 0x000080'\
-      ' 0x800080'\
-      ' 0x008080'\
-      ' 0x808080'\
-      ' 0x000000'\
-      ' 0xd70000'\
-      ' 0x00d700'\
-      ' 0xd7d700'\
-      ' 0x0000d7'\
-      ' 0xd700d7'\
-      ' 0x00d7d7'\
-      ' 0xd7d7d7'
+  DEFAULT_RGB_STR_LIST: str = str(
+    ' 0x202020'
+    ' 0x800000'
+    ' 0x008000'
+    ' 0x808000'
+    ' 0x000080'
+    ' 0x800080'
+    ' 0x008080'
+    ' 0x808080'
+    ' 0x000000'
+    ' 0xd75f5f'
+    ' 0x5fd75f'
+    ' 0xd7d75f'
+    ' 0x5f5fd7'
+    ' 0xd75fd7'
+    ' 0x5fd7d7'
+    ' 0xd7d7d7'
+  )
 
   DEFAULT_RGB_INT_LIST: list[int] =\
     Utils.str_list_to_hex_list(DEFAULT_RGB_STR_LIST.split())

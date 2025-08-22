@@ -12,7 +12,7 @@
 #  -------------------------------
 #  This code may be copied, redistributed, transformed, or built upon in
 #  any format for educational, non-commercial purposes.
-# 
+#
 #  Please give me appropriate credit should you choose to modify this
 #  code. Thank you :)
 #-----------------------------------------------------------------------
@@ -22,7 +22,7 @@
 #_______________________________________________________________________
 
 #_______________________________________________________________________
-# Gnome color scheme
+# GNOME color scheme
 #_______________________________________________________________________
 
 from classes.scheme_types.base_scheme import ColorScheme
@@ -31,19 +31,16 @@ from classes.rgb_color import RgbConst, RgbColor
 
 #_______________________________________________________________________
 class GnomeScheme(ColorScheme):
+  """
+  Used to generate a color scheme file for GNOME Terminal.
+  """
 
   OUT_EXT: str = 'dconf'
 
-  def __init__(self, *arg):
-    """
-    Constructor
-    """
-
-    super(GnomeScheme, self).__init__(*arg)
-    self.ext_ = GnomeScheme.OUT_EXT
-    self.color_scheme_str_: str = self.create_color_scheme_str()
-
-    return
+  COMPLETION_TEXT: str =str (
+    '\nGNOME terminal themes are often saved to:'
+    '\n~/.themes'
+  )
 
   #_____________________________________________________________________
   def create_color_entry(rgb_map: dict) -> str:
@@ -99,4 +96,3 @@ class GnomeScheme(ColorScheme):
         out_str = f'{out_str},'
 
     return out_str
-
