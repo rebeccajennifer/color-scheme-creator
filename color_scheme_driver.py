@@ -85,10 +85,10 @@ if __name__ == '__main__':
 
   else:
     color_scheme =\
-      SchemeType(args.background_color
+      SchemeType(args.name, args.out_dir, args.background_color
         , args.foreground_color
         , args.rgb_list)
 
-  color_scheme.write_file(args.out_dir)
+  color_scheme.write_file()
   color_scheme.on_completion()
   color_scheme.print_color_scheme()

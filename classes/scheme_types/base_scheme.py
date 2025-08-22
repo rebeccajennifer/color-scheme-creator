@@ -43,7 +43,8 @@ class ColorScheme():
 
   BACKGROUND_COLOR: str = 'background-color'
   FOREGROUND_COLOR: str = 'foreground-color'
-  PALETTE: str = 'palette'
+  CURSOR_COLOR    : str = 'cursor-color'
+  PALETTE         : str = 'palette'
 
   PREVIEW: str = str(
     f'\n{Strings.LINE}'
@@ -64,10 +65,11 @@ class ColorScheme():
     , name: str = Strings.DEFAULT_NAME
     , out_dir: str = '.', *arg):
 
-    self.background_color_ = RgbConst.DEFAULT_BACKGROUND
-    self.foreground_color_ = RgbConst.DEFAULT_FOREGROUND
-    self.palette_ = RgbConst.DEFAULT_RGB_INT_LIST
-    self.name_ = name
+    self.cursor_color_      = RgbConst.DEFAULT_CURSOR_COL
+    self.background_color_  = RgbConst.DEFAULT_BACKGROUND
+    self.foreground_color_  = RgbConst.DEFAULT_FOREGROUND
+    self.palette_           = RgbConst.DEFAULT_RGB_INT_LIST
+    self.name_              = name
 
     #___________________________________________________________________
     # Default with no arguments
@@ -131,31 +133,23 @@ class ColorScheme():
     """
 
     #___________________________________________________________________
-    try:
+    if ('name' in input_dict):
       # Ensure file names have no spaces
       self.name_ = input_dict['name'].replace(' ', '-')
-    except:
-      pass
 
     #___________________________________________________________________
-    try:
+    if (self.BACKGROUND_COLOR in input_dict):
       self.background_color_ =\
-        Utils.str_hex_to_int(input_dict[ColorScheme.BACKGROUND_COLOR])
-
-    except TypeError:
-      pass
+        Utils.str_hex_to_int(input_dict[self.BACKGROUND_COLOR])
 
     #___________________________________________________________________
-    try:
+    if (self.FOREGROUND_COLOR in input_dict):
       self.foreground_color_ =\
-        Utils.str_hex_to_int(input_dict[ColorScheme.FOREGROUND_COLOR])
-
-    except TypeError:
-      pass
+        Utils.str_hex_to_int(input_dict[self.FOREGROUND_COLOR])
 
     #___________________________________________________________________
-    try:
-      color_palette: list = input_dict[ColorScheme.PALETTE]
+    if (self.PALETTE in input_dict):
+      color_palette: list = input_dict[self.PALETTE]
 
       if (len(color_palette)):
 
@@ -172,13 +166,10 @@ class ColorScheme():
         elif (isinstance(color_palette[0], int)):
           self.palette_ = color_palette
 
-    except TypeError:
-      pass
-
     return
 
   #_____________________________________________________________________
-  def write_file(self, out_dir) -> None:
+  def write_file(self) -> None:
     """
     Writes color scheme string to file.
 
