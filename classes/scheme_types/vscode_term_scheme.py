@@ -89,20 +89,24 @@ class VsCodeTermScheme(ColorScheme):
     Creates color scheme string to be printed to a file.
     """
 
-    space_length: int =\
-      VsCodeTermScheme.COLOR_FIELD_WIDTH - len('background')
-
-    out_str: str = str(
-      '  "workbench.colorCustomizations":'
-      f'\n  {{ "terminal.background"{': ':>{space_length}}'
-      )
-
+    background: str = "background"
     foreground: str = "foreground"
 
     space_length: int =\
-      VsCodeTermScheme.COLOR_FIELD_WIDTH - len(foreground)
+      VsCodeTermScheme.COLOR_FIELD_WIDTH - len(background)
 
-    out_str = f'{out_str}"#{self.background_color_:06x}"'
+    out_str: str = str(
+      '  "workbench.colorCustomizations":'
+      '\n'
+      r'  {'
+      )
+
+    out_str = f'{out_str}'\
+      f' "terminal.{background}"{": ":>{space_length}}'\
+      f'"#{self.background_color_:06x}"'
+
+    space_length: int =\
+      VsCodeTermScheme.COLOR_FIELD_WIDTH - len(foreground)
 
     out_str = f'{out_str}'\
       f'\n  , "terminal.{foreground}"{": ":>{space_length}}'\
