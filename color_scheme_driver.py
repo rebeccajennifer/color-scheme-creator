@@ -76,9 +76,9 @@ if __name__ == '__main__':
     SchemeType = MinttyScheme
 
   if (args.default):
-    color_scheme = SchemeType()
+    args.scheme_type = ParserStrings.ALL_INPUT
 
-  if (args.scheme_type != 'all'):
+  if (args.scheme_type != ParserStrings.ALL_INPUT):
     scheme_types = [SchemeType]
 
   for SchemeType in scheme_types:
@@ -94,6 +94,6 @@ if __name__ == '__main__':
           , args.rgb_list)
 
     color_scheme.write_file()
+    color_scheme.on_completion()
 
-  color_scheme.on_completion()
   color_scheme.print_color_scheme()
