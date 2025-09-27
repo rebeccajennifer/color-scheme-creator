@@ -112,7 +112,6 @@ class ColorScheme():
     self.out_file_name_: str =\
       f'{self.name_}.{self.OUT_EXT}'
 
-
     if path.isdir(out_dir):
 
       # TODO raise exception instead

@@ -34,7 +34,7 @@ from classes.color_scheme_strings import ColorSchemeStrings as Strings
 #_______________________________________________________________________
 class VsCodeTermScheme(ColorScheme):
 
-  OUT_EXT: str = 'json'
+  OUT_EXT: str = 'vscode.json'
   BACKGROUND_COLOR_INTENSE: str = 'background'
   FOREGROUND_COLOR_INTENSE: str = 'foreground'
 
