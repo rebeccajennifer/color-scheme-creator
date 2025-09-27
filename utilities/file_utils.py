@@ -31,12 +31,16 @@ from os.path import dirname
 from os import mkdir
 from os import remove
 
+from pypdf import PdfReader
+from pypdf import PdfWriter
+
+
 from utilities.error_utils import ErrorUtils
 
 #_____________________________________________________________________
 class FileUtils:
   """
-  Utilities for planner.
+  Utilities related to file and directory operations.
   """
 
   #_____________________________________________________________________

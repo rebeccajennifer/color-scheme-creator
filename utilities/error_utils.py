@@ -37,15 +37,15 @@ class ErrorUtils:
 
   ERROR: str =\
     f'{LINE}'\
-    '\nUH OH! The program has encountered an error!'\
+    '\n UH OH! The program has encountered an error!'\
     f'{LINE}'
 
   ERROR_TYPE: str =\
     f'{ERROR}'\
-    '\nERROR TYPE:  '
+    '\n ERROR TYPE:  '
 
   DESC_LABEL: str =\
-    '\nDESCRIPTION: '
+    '\n DESCRIPTION: '
 
   MK_DIR_NO_PARENT_ERR: str =\
     'Parent directory not found: '
@@ -63,7 +63,7 @@ class ErrorUtils:
   #_____________________________________________________________________
   def raise_exception_with_desc(err: Exception, desc: str) -> None:
     """
-    Raiese exception with descriptive message.
+    Raise exception with descriptive message.
 
     Parameters:
       err   : Exception type.
