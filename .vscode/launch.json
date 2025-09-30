@@ -24,7 +24,18 @@
 { "version":        "0.2.0"
 
 , "configurations":
-  [ { "name"    : "all-flux-dark-linux"
+  [ { "name"    : "all-default-linux"
+    , "type"    : "debugpy"
+    , "request" : "launch"
+    , "program" : "${workspaceFolder}/color_scheme_driver.py"
+    , "console" : "integratedTerminal"
+    , "args":
+      [ "--scheme_type" , "all"
+      , "--name"        , "default"
+      , "--out_dir"     , "${workspaceFolder}/sample-themes/default"
+      ]
+    }
+  , { "name"    : "all-flux-dark-linux"
     , "type"    : "debugpy"
     , "request" : "launch"
     , "program" : "${workspaceFolder}/color_scheme_driver.py"
@@ -36,6 +47,19 @@
       , "--out_dir"     , "${workspaceFolder}/sample-themes/flux-dark"
       ]
     }
+  , { "name"    : "all-flux-lite-linux"
+    , "type"    : "debugpy"
+    , "request" : "launch"
+    , "program" : "${workspaceFolder}/color_scheme_driver.py"
+    , "console" : "integratedTerminal"
+    , "args":
+      [ "--scheme_type" , "all"
+      , "--file"        , "sample-themes/flux-lite/flux-lite-input.json"
+      , "--name"        , "flux-lite"
+      , "--out_dir"     , "${workspaceFolder}/sample-themes/flux-lite"
+      ]
+    }
+
   , { "name"    : "gnome-flux-dark-linux"
     , "type"    : "debugpy"
     , "request" : "launch"
