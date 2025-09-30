@@ -54,7 +54,7 @@
     , "console" : "integratedTerminal"
     , "args":
       [ "--scheme_type" , "all"
-      , "--file"        , "sample-themes/flux-dark/flux-lite-input.json"
+      , "--file"        , "sample-themes/flux-lite/flux-lite-input.json"
       , "--name"        , "flux-lite"
       , "--out_dir"     , "${workspaceFolder}/sample-themes/flux-lite"
       ]
