@@ -7,22 +7,22 @@
 #________________________________________________________________
 
 
-CursorColour       = #808080
-BackgroundColour   = #dadada
-ForegroundColour   = #121212
+CursorColour       = #d7875f
+BackgroundColour   = #1c1c1c
+ForegroundColour   = #afafaf
 Black              = #121212
-Red                = #af005f
-Green              = #5faf00
-Yellow             = #af5f00
-Blue               = #005faf
-Magenta            = #8700af
-Cyan               = #00af87
+Red                = #d75f87
+Green              = #87af5f
+Yellow             = #ff875f
+Blue               = #5f87d7
+Magenta            = #af5fd7
+Cyan               = #5fafaf
 White              = #afafaf
-BoldBlack          = #121212
-BoldRed            = #d7005f
-BoldGreen          = #5fd700
-BoldYellow         = #d75f00
-BoldBlue           = #005fd7
-BoldMagenta        = #8700d7
-BoldCyan           = #00d787
-BoldWhite          = #eeeeee
+BoldBlack          = #000000
+BoldRed            = #ff5faf
+BoldGreen          = #afd75f
+BoldYellow         = #ffaf5f
+BoldBlue           = #5fafff
+BoldMagenta        = #d75fff
+BoldCyan           = #5fd7d7
+BoldWhite          = #d7d7d7
