@@ -48,13 +48,6 @@ if __name__ == '__main__':
 
   new_line(2)
 
-  #_____________________________________________________________________
-  # TODO create unit test framework
-  #_____________________________________________________________________
-  # print(GeneralUtils.str_hex_to_int('g'))
-  # print(GeneralUtils.str_hex_to_int('0x00000F'))
-  #_____________________________________________________________________
-
   parser: argparse.ArgumentParser = argparse.ArgumentParser()
   ColorSchemeParser.init_parser(parser)
 
@@ -62,6 +55,13 @@ if __name__ == '__main__':
 
   scheme_name : str = args.name
   out_dir     : str = args.out_dir
+
+  scheme_types: list =\
+  [ GnomeScheme
+  #, KonsoleScheme
+  , VsCodeTermScheme
+  , MinttyScheme
+  ]
 
   if (args.scheme_type == ParserStrings.GNOME_INPUT):
     SchemeType = GnomeScheme
@@ -76,19 +76,24 @@ if __name__ == '__main__':
     SchemeType = MinttyScheme
 
   if (args.default):
-    color_scheme = SchemeType()
+    args.scheme_type = ParserStrings.ALL_INPUT
 
-  # Data in file overrides all other arguments
-  if(args.file):
-    color_scheme = SchemeType(
-      args.name, args.out_dir, Utils.read_hex_color_json(args.file))
+  if (args.scheme_type != ParserStrings.ALL_INPUT):
+    scheme_types = [SchemeType]
 
-  else:
-    color_scheme =\
-      SchemeType(args.name, args.out_dir, args.background_color
-        , args.foreground_color
-        , args.rgb_list)
+  for SchemeType in scheme_types:
+    # Data in file overrides all other arguments
+    if(args.file):
+      color_scheme = SchemeType(
+        args.name, args.out_dir, Utils.read_hex_color_json(args.file))
 
-  color_scheme.write_file()
-  color_scheme.on_completion()
+    else:
+      color_scheme =\
+        SchemeType(args.name, args.out_dir, args.background_color
+          , args.foreground_color
+          , args.rgb_list)
+
+    color_scheme.write_file()
+    color_scheme.on_completion()
+
   color_scheme.print_color_scheme()

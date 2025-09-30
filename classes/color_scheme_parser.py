@@ -51,12 +51,18 @@ class ParserStrings:
   SCHEME_TYPE_HELP_DESC: str =\
     'Type of profile, e.g. Gnome, Konsole'
 
+  GNOME_INPUT       : str = 'gnome'
+  KONSOLE_INPUT     : str = 'konsole'
+  VSCODE_TERM_INPUT : str = 'vscode-term'
+  MINTTY_INPUT      : str = 'mintty'
+  ALL_INPUT         : str = 'all'
+
   SCHEME_TYPES: list =\
-    [ 'gnome'
-    , 'konsole'
-    , 'vscode-term'
-    , 'mintty'
-    , 'all'
+    [ GNOME_INPUT
+    , KONSOLE_INPUT
+    , VSCODE_TERM_INPUT
+    , MINTTY_INPUT
+    , ALL_INPUT
     ]
 
   CMD_LINE_ENTRY_GROUP_TITLE: str =\
@@ -113,11 +119,6 @@ class ParserStrings:
     'Select to use default color profile:'\
     f'{RgbColor.int_list_hex_str(RgbConst.DEFAULT_RGB_INT_LIST)}'
 
-  GNOME_INPUT: str = 'gnome'
-  KONSOLE_INPUT: str = 'konsole'
-  VSCODE_TERM_INPUT: str = 'vscode-term'
-  MINTTY_INPUT: str = 'mintty'
-
   COLOR_RANGE: str = '{0x000000-0xFFFFFF}'
 
   DEFAULT_NAME: str = ColorSchemeStrings.DEFAULT_NAME
@@ -140,7 +141,7 @@ class ColorSchemeParser:
       , action='store'
       , type=str
       , required=False
-      , default=ParserStrings.GNOME_INPUT
+      , default=ParserStrings.ALL_INPUT
       , choices=ParserStrings.SCHEME_TYPES
     )
 

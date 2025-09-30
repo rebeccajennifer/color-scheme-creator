@@ -32,6 +32,7 @@ from classes.color_scheme_strings import ErrorStrings
 from classes.rgb_color import RgbColor
 from classes.rgb_color import RgbConst
 from utilities.color_scheme_utils import GeneralUtils as Utils
+from utilities.file_utils import FileUtils
 
 
 #_______________________________________________________________________
@@ -112,15 +113,10 @@ class ColorScheme():
     self.out_file_name_: str =\
       f'{self.name_}.{self.OUT_EXT}'
 
+    FileUtils.verify_dir(path.abspath(out_dir))
 
-    if path.isdir(out_dir):
-
-      # TODO raise exception instead
-      if (not path.isdir(out_dir)):
-        input(f'{ErrorStrings.INVALID_DIR}{Strings.CONTINUE}')
-      else:
-          self.out_file_path_ = path.join(out_dir, self.out_file_name_)
-
+    self.out_file_path_ = path.join(out_dir, self.out_file_name_)
+    self.out_file_path_ = path.abspath(self.out_file_path_)
 
     self.color_scheme_str_: str = self.create_color_scheme_str()
 

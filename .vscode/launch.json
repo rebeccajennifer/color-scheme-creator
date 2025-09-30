@@ -24,17 +24,28 @@
 { "version":        "0.2.0"
 
 , "configurations":
-  [ { "name"    : "gnome-flux-dark-linux"
+  [ { "name"    : "all-flux-dark-linux"
+    , "type"    : "debugpy"
+    , "request" : "launch"
+    , "program" : "${workspaceFolder}/color_scheme_driver.py"
+    , "console" : "integratedTerminal"
+    , "args":
+      [ "--scheme_type" , "all"
+      , "--file"        , "sample-themes/flux-dark/flux-dark-input.json"
+      , "--name"        , "flux-dark"
+      , "--out_dir"     , "${workspaceFolder}/sample-themes/flux-dark"
+      ]
+    }
+  , { "name"    : "gnome-flux-dark-linux"
     , "type"    : "debugpy"
     , "request" : "launch"
     , "program" : "${workspaceFolder}/color_scheme_driver.py"
     , "console" : "integratedTerminal"
     , "args":
       [ "--scheme_type" , "gnome"
-      , "--file"        , "sample-themes/flux-dark.json"
+      , "--file"        , "sample-themes/flux-dark/flux-dark-input.json"
       , "--name"        , "flux-dark"
-      , "--out_dir"     , "${workspaceFolder}/sample-themes"
-      //, "--out_dir"     , "~/.themes"
+      , "--out_dir"     , "${workspaceFolder}/sample-themes/flux-dark"
       ]
     }
   , { "name"    : "gnome-flux-test-linux"
@@ -46,8 +57,7 @@
       [ "--scheme_type" , "gnome"
       , "--file"        , "sample-themes/flux-test.json"
       , "--name"        , "flux-test"
-      , "--out_dir"     , "${workspaceFolder}/sample-themes"
-      //, "--out_dir"     , "~/.themes"
+      , "--out_dir"     , "${workspaceFolder}/sample-themes/flux-test"
       ]
     }
   , { "name"    : "gnome-flux-lite-linux"
@@ -57,10 +67,9 @@
     , "console" : "integratedTerminal"
     , "args":
       [ "--scheme_type" , "gnome"
-      , "--file"        , "sample-themes/flux-lite.json"
+      , "--file"        , "sample-themes/flux-lite/flux-lite-input.json"
       , "--name"        , "flux-lite"
       , "--out_dir"     , "${workspaceFolder}/sample-themes"
-      //, "--out_dir"     , "~/.themes"
       ]
     }
   , { "name"    : "mintty-flux-dark"
@@ -70,7 +79,7 @@
     , "console" : "integratedTerminal"
     , "args"    :
       [ "--scheme_type" , "mintty"
-      , "--file"        , "sample-themes/flux-dark.json"
+      , "--file"        , "sample-themes/flux-dark/flux-dark-input.json"
       , "--name"        , "flux-dark"
       , "--out_dir"     , "${workspaceFolder}/sample-themes"
       ]
@@ -82,8 +91,8 @@
     , "console" : "integratedTerminal"
     , "args"    :
       [ "--scheme_type" , "mintty"
-      , "--file"        , "sample-themes/flux-lite.json"
-      , "--name"        , "flux-dark"
+      , "--file"        , "sample-themes/flux-lite/flux-lite-input.json"
+      , "--name"        , "flux-lite"
       , "--out_dir"     , "${workspaceFolder}/sample-themes"
       ]
     }
@@ -94,9 +103,9 @@
     , "console" : "integratedTerminal"
     , "args":
       [ "--scheme_type" , "konsole"
-      , "--file"        , "sample-themes/flux-dark.json"
+      , "--file"        , "sample-themes/flux-dark/flux-dark-input.json"
       , "--name"        , "flux-dark"
-      , "--out_dir"     , "${workspaceFolder}/sample-themes"
+      , "--out_dir"     , "${workspaceFolder}/sample-themes/flux-dark"
       ]
     }
   , { "name"    : "vscode-flux-dark-linux"
@@ -106,7 +115,7 @@
     , "console" : "integratedTerminal"
     , "args":
       [ "--scheme_type" , "vscode-term"
-      , "--file"        , "sample-themes/flux-dark.json"
+      , "--file"        , "sample-themes/flux-dark/flux-dark-input.json"
       , "--name"        , "vs-code-flux-dark"
       , "--out_dir"     , "${workspaceFolder}/sample-themes"
       ]
@@ -126,9 +135,10 @@
     , "program" : "${workspaceFolder}/color_scheme_driver.py"
     , "console" : "integratedTerminal"
     , "args"    :
-    [ "--scheme_type"   , "mintty"
-    , "--out_dir"       , "${workspaceFolder}"
-    ]
+      [ "--scheme_type" , "mintty"
+      , "--file"        , "sample-themes/flux-dark/flux-dark-input.json"
+      , "--out_dir"     , "${workspaceFolder}"
+      ]
     }
   , { "name"    : "default"
     , "type"    : "debugpy"
@@ -137,8 +147,9 @@
     , "console" : "integratedTerminal"
     , "args"    :
       [ "--default"
-      , "--scheme_type" , "vscode-term"
+      , "--scheme_type" , "all"
       , "--name"        , "default"
+      , "--out_dir"     , "${workspaceFolder}/sample-themes/default"
       ]
     }
   ]
