@@ -35,6 +35,18 @@
       , "--out_dir"     , "${workspaceFolder}/sample-themes/default"
       ]
     }
+  , { "name"    : "all-flux-dark-linux-abbrev"
+    , "type"    : "debugpy"
+    , "request" : "launch"
+    , "program" : "${workspaceFolder}/color_scheme_driver.py"
+    , "console" : "integratedTerminal"
+    , "args":
+      [ "-s" , "all"
+      , "-f" , "sample-themes/flux-dark/flux-dark-input.json"
+      , "-n" , "flux-dark"
+      , "-o" , "${workspaceFolder}/sample-themes/flux-dark"
+      ]
+    }
   , { "name"    : "all-flux-dark-linux"
     , "type"    : "debugpy"
     , "request" : "launch"
