@@ -137,6 +137,7 @@ class ColorSchemeParser:
     parser.description = ParserStrings.PROGRAM_DESC
 
     parser.add_argument( '--scheme_type'
+      , '-s'
       , help=ParserStrings.SCHEME_TYPE_HELP_DESC
       , action='store'
       , type=str
@@ -151,6 +152,7 @@ class ColorSchemeParser:
        , ParserStrings.CMD_LINE_ENTRY_GROUP_DESC)
 
     cmd_line_group.add_argument('--background_color'
+      , '-bg'
       , help=ParserStrings.BACKGND_HELP_DESC
       , action='store'
       , type=GeneralUtils.str_hex_to_int
@@ -161,6 +163,7 @@ class ColorSchemeParser:
     )
 
     cmd_line_group.add_argument('--foreground_color'
+      , '-fg'
       , help=ParserStrings.FOREGND_HELP_DESC
       , action='store'
       , type=GeneralUtils.str_hex_to_int
@@ -170,8 +173,8 @@ class ColorSchemeParser:
       , metavar=ParserStrings.COLOR_RANGE
     )
 
-    cmd_line_group.add_argument('-rgb'
-      , '--rgb_list'
+    cmd_line_group.add_argument('--rgb_list'
+      , '-rgb'
       , help=ParserStrings.RGB_LIST_HELP_DESC
       , action='store'
       , type=str
@@ -180,6 +183,7 @@ class ColorSchemeParser:
     )
 
     parser.add_argument('--name'
+      , '-n'
       , help=ParserStrings.OUT_FILE_HELP_DESC
       , action='store'
       , type=str
@@ -188,6 +192,7 @@ class ColorSchemeParser:
     )
 
     parser.add_argument('--out_dir'
+      , '-o'
       , help=ParserStrings.OUT_DIR_HELP_DESC
       , action='store'
       , type=str
@@ -195,6 +200,7 @@ class ColorSchemeParser:
     )
 
     parser.add_argument('--file'
+      , '-f'
       , help=ParserStrings.COLOR_JSON_HELP_DESC
       , action='store'
       , type=str
@@ -202,6 +208,7 @@ class ColorSchemeParser:
     )
 
     parser.add_argument('--default'
+      , '-d'
       , help=ParserStrings.DEFAULT_DESC
       , action='store_true'
       , required=False
