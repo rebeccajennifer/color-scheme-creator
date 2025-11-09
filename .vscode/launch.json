@@ -59,6 +59,18 @@
       , "--out_dir"     , "${workspaceFolder}/sample-themes/flux-bunny-dark-bright"
       ]
     }
+  , { "name"    : "all-flux-bunny-dark-pastel-linux"
+    , "type"    : "debugpy"
+    , "request" : "launch"
+    , "program" : "${workspaceFolder}/color_scheme_driver.py"
+    , "console" : "integratedTerminal"
+    , "args":
+      [ "--scheme_type" , "all"
+      , "--file"        , "sample-themes/flux-bunny-dark-pastel/flux-bunny-dark-pastel-input.json"
+      , "--name"        , "flux-bunny-dark-pastel"
+      , "--out_dir"     , "${workspaceFolder}/sample-themes/flux-bunny-dark-pastel"
+      ]
+    }
   , { "name"    : "all-flux-bunny-lite-linux"
     , "type"    : "debugpy"
     , "request" : "launch"
