@@ -68,11 +68,8 @@ if __name__ == '__main__':
 
   script_dir: str = path.dirname(path.abspath(__file__))
 
-  template_file: str = path.join('/home'
-    , 'flux'
-    , 'git'
-    , 'setup-files'
-    , 'vscode'
+  template_file: str = path.join(script_dir
+    , 'templates'
     , 'flux-bunny-template.json'
   )
 
