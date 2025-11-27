@@ -4,109 +4,135 @@
 , "type"        : "dark"
 
 , "colors":
-  { "editor.background"                 : "#BG__NORM"
-  , "editor.foreground"                 : "#FG__NORM"
+  { "foreground"                                          : "#FG__NORM"
+  , "selection.background"                                : "#VIO_NORM"
+  , "errorForeground"                                     : "#FG__INVL"
+  , "focusBorder"                                         : "#CYA_BGND"
+  //, "window.activeBorder"                                 : "#CYA_BGND"
+  , "widget.border"                                       : "#GRN_BGND"
 
-  , "terminal.background"               : "#BG__BOLD"
-  , "terminal.foreground"               : "#FG__BOLD"
+  , "editor.background"                                   : "#BG__NORM"
+  , "editor.foreground"                                   : "#FG__NORM"
 
-  , "terminal.ansiBrightBlack"          : "#BLK_BOLD"
-  , "terminal.ansiBrightRed"            : "#RED_BOLD"
-  , "terminal.ansiBrightGreen"          : "#GRN_BOLD"
-  , "terminal.ansiBrightYellow"         : "#YEL_BOLD"
-  , "terminal.ansiBrightBlue"           : "#BLU_BOLD"
-  , "terminal.ansiBrightMagenta"        : "#VIO_BOLD"
-  , "terminal.ansiBrightCyan"           : "#CYA_BOLD"
-  , "terminal.ansiBrightWhite"          : "#WHT_BOLD"
+  , "terminal.background"                                 : "#BG__BOLD"
+  , "terminal.foreground"                                 : "#FG__BOLD"
 
-  , "terminal.ansiBlack"                : "#BLK_NORM"
-  , "terminal.ansiRed"                  : "#RED_NORM"
-  , "terminal.ansiGreen"                : "#GRN_NORM"
-  , "terminal.ansiYellow"               : "#YEL_NORM"
-  , "terminal.ansiBlue"                 : "#BLU_NORM"
-  , "terminal.ansiMagenta"              : "#VIO_NORM"
-  , "terminal.ansiCyan"                 : "#CYA_NORM"
-  , "terminal.ansiWhite"                : "#WHT_NORM"
+  , "terminal.ansiBrightBlack"                            : "#BLK_BOLD"
+  , "terminal.ansiBrightRed"                              : "#RED_BOLD"
+  , "terminal.ansiBrightGreen"                            : "#GRN_BOLD"
+  , "terminal.ansiBrightYellow"                           : "#YEL_BOLD"
+  , "terminal.ansiBrightBlue"                             : "#BLU_BOLD"
+  , "terminal.ansiBrightMagenta"                          : "#VIO_BOLD"
+  , "terminal.ansiBrightCyan"                             : "#CYA_BOLD"
+  , "terminal.ansiBrightWhite"                            : "#WHT_BOLD"
 
-  , "editorBracketHighlight.foreground1"                  : "#RED_BOLD"
-  , "editorBracketHighlight.foreground2"                  : "#CYA_BOLD"
-  , "editorBracketHighlight.foreground3"                  : "#GRN_BOLD"
-  , "editorBracketHighlight.unexpectedBracket.foreground" : "#RED_INVL"
+  , "terminal.ansiBlack"                                  : "#BLK_NORM"
+  , "terminal.ansiRed"                                    : "#RED_NORM"
+  , "terminal.ansiGreen"                                  : "#GRN_NORM"
+  , "terminal.ansiYellow"                                 : "#YEL_NORM"
+  , "terminal.ansiBlue"                                   : "#BLU_NORM"
+  , "terminal.ansiMagenta"                                : "#VIO_NORM"
+  , "terminal.ansiCyan"                                   : "#CYA_NORM"
+  , "terminal.ansiWhite"                                  : "#WHT_NORM"
 
-  , "selection.background"                                : "#CYA_NORM87"
-  , "errorForeground"                                     : "#RED_INVL"
-  , "icon.foreground"                                     : "#BG__BOLD"
+  , "editorBracketHighlight.foreground1"                  : "#GRN_BOLD"
+  , "editorBracketHighlight.foreground3"                  : "#CYA_BOLD"
+  , "editorBracketHighlight.foreground2"                  : "#RED_BOLD"
+  , "editorBracketHighlight.unexpectedBracket.foreground" : "#FG__INVL"
 
   , "editor.wordHighlightBackground"                      : "#BG__BOLDaf"
   , "editorWarning.foreground"                            : "#YEL_BOLD"
-  , "editorError.foreground"                              : "#RED_INVL"
+  , "editorError.foreground"                              : "#FG__INVL"
   , "editorLineNumber.activeForeground"                   : "#GRN_NORM"
   , "editorLineNumber.foreground"                         : "#878787"
 
   , "tab.activeBackground"                                : "#BG__NORM"
   , "tab.activeForeground"                                : "#FG__BOLD"
   , "tab.inactiveBackground"                              : "#BG__BOLD"
-  , "tab.inactiveForeground"                              : "#BLU_NORM"
+  , "tab.inactiveForeground"                              : "#FG__NORM"
   , "tab.unfocusedActiveForeground"                       : "#CYA_BOLD"
-  , "tab.unfocusedInactiveForeground"                     : "#VIO_NORM"
+  , "tab.unfocusedInactiveForeground"                     : "#FG__NORM"
 
   , "sideBar.background"                                  : "#BG__BOLD"
   , "sideBar.foreground"                                  : "#FG__NORM"
-  , "sideBar.border"                                      : "#GRN_BOLD"
-  , "sideBarTitle.background"                             : "#BLU_BOLD"
-  , "sideBarTitle.foreground"                             : "#BG__NORM"
-  , "sideBarSectionHeader.background"                     : "#VIO_NORM"
-  , "sideBarSectionHeader.foreground"                     : "#BG__NORM"
+  , "sideBar.border"                                      : "#GRN_NORM"
+  , "sideBarTitle.background"                             : "#BLU_BGND"
+  , "sideBarTitle.foreground"                             : "#FG__NORM"
+  , "sideBarSectionHeader.background"                     : "#VIO_BGND"
+  , "sideBarSectionHeader.foreground"                     : "#FG__NORM"
 
   , "panel.background"                                    : "#BG__BOLD"
-  , "panel.border"                                        : "#GRN_BOLD"
-  , "panelTitle.activeForeground"                         : "#FG__NORM"
-  , "panelTitle.inactiveForeground"                       : "#VIO_NORM"
-  , "panelTitle.border"                                   : "#GRN_NORM"
+  , "panel.border"                                        : "#GRN_NORM"
+  , "panelTitle.activeForeground"                         : "#FG__BOLD"
+  , "panelTitle.inactiveForeground"                       : "#FG__NORM"
+  , "panelTitle.border"                                   : "#BG__NORM"
   //, "panelSectionHeader.background"                       : "#GRN_NORM"
   //, "panelTitleBadge.foreground"                          : "#BG__NORM"
 
-  , "statusBar.background"                                : "#CYA_BOLD"
-  , "statusBar.foreground"                                : "#BG__NORM"
-  , "statusBar.debuggingBackground"                       : "#YEL_BOLD"
-  , "statusBarItem.remoteBackground"                      : "#BLU_BOLD"
+  , "statusBar.background"                                : "#BLU_BGND"
+  , "statusBar.foreground"                                : "#FG__NORM"
+  , "statusBar.debuggingBackground"                       : "#VIO_BGND"
+  , "statusBarItem.remoteBackground"                      : "#BLU_BGND"
 
-  , "banner.background"                                 : "#YEL_BOLD"
+  , "banner.background"                                   : "#YEL_BOLD"
 
-  , "list.activeSelectionBackground"                      : "#CYA_BOLD"
-  , "list.activeSelectionForeground"                      : "#BG__NORM"
+  , "list.activeSelectionBackground"                      : "#CYA_BGND"
+  , "list.activeSelectionForeground"                      : "#FG__NORM"
   , "list.inactiveSelectionBackground"                    : "#BG__NORM"
-  , "list.inactiveSelectionForeground"                    : "#BLU_BOLD"
-  , "list.hoverBackground"                                : "#BLU_NORM"
-  , "list.hoverForeground"                                : "#BG__NORM"
+  , "list.inactiveSelectionForeground"                    : "#BLU_BGND"
+  , "list.hoverBackground"                                : "#CYA_BGND5f"
+  , "list.hoverForeground"                                : "#FG__NORM"
   , "list.dropBackground"                                 : "#YEL_BOLD"
 
-  , "list.highlightForeground"                            : "#GRN_BOLD"
-  , "list.focusBackground"                                : "#BLU_BOLD"
+  , "list.highlightForeground"                            : "#GRN_NORM"
+  , "list.focusBackground"                                : "#BLU_BGND"
 
-  , "button.background"                                   : "#YEL_BOLD"
-  , "button.foreground"                                   : "#BG__BOLD"
+  , "button.background"                                   : "#CYA_BGND"
+  , "button.foreground"                                   : "#FG__NORM"
 
-  , "debugIcon.breakpointForeground"                      : "#RED_INVL"
+  , "debugIcon.breakpointForeground"                      : "#FG__INVL"
+  , "debugIcon.startForeground"                           : "#GRN_NORM"
+  , "debugIcon.stopForeground"                            : "#RED_NORM"
+  , "debugIcon.stepIntoForeground"                        : "#BLU_NORM"
+  , "debugIcon.stepOverForeground"                        : "#BLU_NORM"
+  , "debugIcon.stepOutForeground"                         : "#BLU_NORM"
+  , "debugIcon.continueForeground"                        : "#GRN_NORM"
+  , "debugIcon.restartForeground"                         : "#CYA_NORM"
+  , "editor.inlineValuesBackground"                       : "#BG__BOLD"
+  , "editor.inlineValuesForeground"                       : "#YEL_NORM"
+  , "editor.stackFrameHighlightBackground"                : "#BG__BOLD"
 
   , "gitDecoration.addedResourceForeground"               : "#GRN_BOLD"
   , "gitDecoration.modifiedResourceForeground"            : "#YEL_NORM"
   , "gitDecoration.untrackedResourceForeground"           : "#GRN_BOLD"
 
   , "scmGraph.foreground1"                                : "#YEL_NORM"
-  //, "scmGraph.foreground2"                                 : "#878787"
-  //, "scmGraph.foreground3"                                 : "#GRN_BOLD"
-  //, "scmGraph.foreground4"                                 : "#VIO_NORM"
-  //, "scmGraph.foreground5"                                 : "#RED_INVL"
+  , "scmGraph.historyItemBaseRefColor"                    : "#RED_BOLD"
+  , "scmGraph.historyItemRefColor"                        : "#CYA_BGND"
+  , "scmGraph.historyItemRemoteRefColor"                  : "#RED_BOLD"
 
-  , "problemsErrorIcon.foreground"                        : "#RED_INVL"
-  , "problemsWarningIcon.foreground"                      : "#YEL_NORM"
-  , "problemsInfoIcon.foreground"                         : "#YEL_NORM"
+  //, "scmGraph.historyItemHoverDefaultLabelBackground"     : "#GRN_BGND"
+  //, "scmGraph.historyItemHoverDefaultLabelForeground"     : "#FG__NORM"
+  //, "scmGraph.foreground2"                                : "#RED_NORM"
+  //, "scmGraph.foreground3"                                : "#RED_NORM"
+  //, "scmGraph.foreground4"                                : "#RED_NORM"
+  //, "scmGraph.foreground5"                                : "#RED_NORM"
 
   , "minimap.background"                                  : "#BG__BOLD"
-  , "minimap.errorHighlight"                              : "#RED_INVL"
+  , "minimap.errorHighlight"                              : "#FG__INVL"
   , "minimap.warningHighlight"                            : "#YEL_NORM"
   , "minimap.selectionHighlight"                          : "#CYA_NORMaf"
+
+  , "inputValidation.warningBackground"                   : "#FG__INVL"
+  , "inputValidation.warningForeground"                   : "#FG__NORM"
+  , "inputValidation.warningBorder"                       : "#FG__NORM"
+  , "inputValidation.errorBackground"                     : "#BG__NORM"
+  , "inputValidation.errorForeground"                     : "#FG__INVL"
+  , "inputValidation.errorBorder"                         : "#FG__INVL"
+
+  , "problemsErrorIcon.foreground"                        : "#FG__INVL"
+  , "problemsWarningIcon.foreground"                      : "#YEL_NORM"
+  , "problemsInfoIcon.foreground"                         : "#YEL_NORM"
 
   , "symbolIcon.arrayForeground"                          : "#GRN_BOLD"
   //, "symbolIcon.booleanForeground"                        : "#"
@@ -147,21 +173,32 @@
 , "tokenColors":
   [ {}
 
-  , { "name"  : "Color 7: White"
+  , { "name"  : "Foreground"
     , "scope": [ ""
       , "source"
       , "text.html" // Comment specifier
       , "variable.parameter"
+      , "meta.body.function.definition"
+      , "meta.function.definition"
+      , "meta.function-call.arguments"
+      , "punctuation"
+      , "punctuation.definition.string"
+      , "punctuation.definition.string.begin.python"
+      , "punctuation.support.type.property-name"
+      , "punctuation.separator.arguments"
+      , "punctuation.separator.array"
+      , "punctuation.separator.dictionary.pair"
+      , "punctuation.separator.key-value"             // class="value"
+      , "string.interpolated"
       , ""
       ], "settings": { "foreground": "#FG__NORM" }
   }
 
-  , { "name"  : "Color 15: Bright White"
+  , { "name"  : "Foreground Bold"
     , "scope": [ ""
-      , "punctuation"
       , "keyword.control.ternary" // Java - : in Circle: "circle"
       , ""
-      ], "settings": { "foreground": "#WHT_BOLD" }
+      ], "settings": { "foreground": "#FG__BOLD" }
     }
 
   , { "name"  : "Color 1: Pink"
@@ -174,7 +211,6 @@
       , "keyword.other.directive.using" // using a = float
       , "keyword.other.operator"
       , "keyword.other.using"
-      , "punctuation.definition.constant" // # in #ff0000
       , ""
       ] , "settings": { "foreground": "#RED_NORM" }
     }
@@ -183,68 +219,75 @@
     , "scope" : [ ""
       , "invalid"
       , ""
-      ], "settings": { "foreground": "#RED_INVL" }
+      ], "settings": { "foreground": "#FG__INVL" }
     }
 
   , { "name"  : "Color 2: Green"
     , "scope" : [ ""
-      , "keyword.operator"
+
       , "heading.3.markdown"
       , "heading.3.quarto"
-      , "meta.function-call"
+      , "keyword.operator"
+      , "keyword.operator.assignment"
+      , "keyword.operator.comparison"
+      , "punctuation.definition.constant"         // # in #ff0000
       , "punctuation.definition.link.description"
-      , "punctuation.separator.key-value"             // class="value"
+      , "punctuation.separator.annotation.result" // -> in def f() -> int:
       ]
     , "settings": { "foreground": "#GRN_NORM" }
     }
 
   , { "name"  : "Color 10: Dark Green"
     , "scope" : [ ""
-      , "constant.character.escape"                   // \n in "\n"
-      , "constant.other.placeholder"                  // %02X in string
       , "keyword.control.directive"
       , "keyword.control.import"
       , "keyword.other.export"
       , "keyword.other.import"
-      , "storage.type.modifier"                     // public
+      , "storage.type.modifier"        // public
       , ""
       ]
     , "settings": { "foreground": "#GRN_BOLD"}
     }
 
-  , { "name"  : "Color 3: Orange"
+  , { "name"  : "Color 3: Yellow"
     , "scope" : [ ""
       , "constant.language"
       , "heading.2.markdown"
       , "heading.2.quarto"
       , "keyword"
+      , "keyword.operator"
       , "keyword.operator.cast"                       // static_cast
       , "keyword.operator.delete"
       , "keyword.operator.new"
       , "meta.separator"
       , "storage.modifier"                            // const, static
-
-      , "meta.function.definition"
+      , "support.constant.property-value.css"
       , ""
       , ""
-      ], "settings": { "foreground": "#ffaf87"}
+      ], "settings": { "foreground": "#YEL_NORM"}
     }
 
-  , { "name": "Color 11: Yellow"
+  , { "name": "Color 11: Yellow Bold"
     , "scope": [""
-      , "support.function"
-      ], "settings": { "foreground": "#YEL_NORM" }
+      , "constant.character.escape"    // \n in "\n"
+      , "constant.other.placeholder"   // %02X in string
+      , "storage.type.format"          // 2x in {a:2x}
+
+      , "entity.name.operator.custom-literal"
+      , "keyword.other.unit"
+      ], "settings": { "foreground": "#YEL_BOLD" }
     }
 
  , { "name"  : "Color 4: Blue"
     , "scope" : [ ""
-      , "entity.name.variable"
+      //, "entity.name.variable"
       , "heading.4.markdown"
       , "heading.4.quarto"
-      , "meta.function-call"
       , "meta.member.access.python"
       , "markup.list.numbered"
       , "variable.other.object"
+      , "variable.other.property" // b in a.b
+      , "support.type.property-name"
       , ""
       ], "settings": { "foreground": "#BLU_NORM"}
     }
@@ -261,6 +304,7 @@
       , "storage.type.built-in"                     // int
       , "storage.type.function"                     // def in python
       , "storage.type.primitive"                    // int
+      , "storage.type.string"                       // f in f'string'
       , "storage.type.template.argument.typename"   // public
       , "support.variable"
       , ""
@@ -272,7 +316,6 @@
       , "entity.name.scope-resolution"
       , "heading.5.markdown"
       , "heading.5.quarto"
-      , "meta.function-call"
       , "storage.type.class"
       , "storage.type.enum"
       , "storage.type.namespace.definition"
@@ -308,11 +351,10 @@
 
   , { "name"  : "Color 14: Dark Cyan"
     , "scope" : [ ""
+      , "support.function"
       , "entity.name.function"
-      , "entity.name.operator.custom-literal"
-      , "keyword.other.unit"
-      , "support.type.property-name"
-      , "variable.other.property" // b in a.b
+      , "meta.function-call"
+
       ], "settings": { "foreground": "#CYA_BOLD" }
     }
 
@@ -372,7 +414,9 @@
 
   // These properties override tokenColors
 , "semanticTokenColors":
-  { //"variable"      : "#BLU_NORM"
+  {
+    "enumMember"    : "#YEL_NORM" // Class member variables
+  //"variable"      : "#BLU_NORM"
   //, "property"      : "#BLU_NORM" // Class member variables
   //, "parameter"     : "#BLU_NORM" // Function parameters
   //, "enumMember"    : "#BLU_NORM" // Class member variables
