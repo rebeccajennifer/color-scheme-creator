@@ -1,21 +1,27 @@
 {
   "$schema"     : "vscode://schemas/color-theme"
-, "name"        : "Flux Bunny Dark"
-, "type"        : "dark"
+, "name"        : "Flux Bunny Lite"
 
 , "colors":
   { "foreground"                                          : "#FG__NORM"
-  , "selection.background"                                : "#VIO_NORM"
+  , "selection.background"                                : "#VIO_BGND"
   , "errorForeground"                                     : "#FG__INVL"
   , "focusBorder"                                         : "#CYA_BGND"
   //, "window.activeBorder"                                 : "#CYA_BGND"
   , "widget.border"                                       : "#GRN_BGND"
 
+
   , "editor.background"                                   : "#BG__NORM"
   , "editor.foreground"                                   : "#FG__NORM"
+  , "editorCursor.background"                             : "#FG__NORM"
+  , "editorCursor.foreground"                             : "#GRN_BGND"
+  , "editor.selectionBackground"                          : "#BLU_BGND5f"
+  , "editor.wordHighlightTextBackground"                  : "#VIO_BGND5f"
 
   , "terminal.background"                                 : "#BG__BOLD"
   , "terminal.foreground"                                 : "#FG__BOLD"
+  , "terminalCursor.background"                           : "#FG__NORM"
+  , "terminalCursor.foreground"                           : "#GRN_BGND"
 
   , "terminal.ansiBrightBlack"                            : "#BLK_BOLD"
   , "terminal.ansiBrightRed"                              : "#RED_BOLD"
@@ -46,6 +52,11 @@
   , "editorLineNumber.activeForeground"                   : "#GRN_NORM"
   , "editorLineNumber.foreground"                         : "#878787"
 
+  , "dropdown.background"                                 : "#BG__BOLD"
+  , "dropdown.foreground"                                 : "#FG__NORM"
+  , "dropdown.border"                                     : "#GRN_NORM"
+  , "dropdown.listBackground"                             : "#BG__BOLD"
+
   , "tab.activeBackground"                                : "#BG__NORM"
   , "tab.activeForeground"                                : "#FG__BOLD"
   , "tab.inactiveBackground"                              : "#BG__BOLD"
@@ -74,7 +85,7 @@
   , "statusBar.debuggingBackground"                       : "#VIO_BGND"
   , "statusBarItem.remoteBackground"                      : "#BLU_BGND"
 
-  , "banner.background"                                   : "#YEL_BOLD"
+  //, "banner.background"                                   : "#YEL_BOLD"
 
   , "list.activeSelectionBackground"                      : "#CYA_BGND"
   , "list.activeSelectionForeground"                      : "#FG__NORM"
@@ -87,7 +98,7 @@
   , "list.highlightForeground"                            : "#GRN_NORM"
   , "list.focusBackground"                                : "#BLU_BGND"
 
-  , "button.background"                                   : "#CYA_BGND"
+  , "button.background"                                   : "#GRN_BGND"
   , "button.foreground"                                   : "#FG__NORM"
 
   , "debugIcon.breakpointForeground"                      : "#FG__INVL"
@@ -104,7 +115,7 @@
 
   , "gitDecoration.addedResourceForeground"               : "#GRN_BOLD"
   , "gitDecoration.modifiedResourceForeground"            : "#YEL_NORM"
-  , "gitDecoration.untrackedResourceForeground"           : "#GRN_BOLD"
+  , "gitDecoration.untrackedResourceForeground"           : "#GRN_NORM"
 
   , "scmGraph.foreground1"                                : "#YEL_NORM"
   , "scmGraph.historyItemBaseRefColor"                    : "#RED_BOLD"

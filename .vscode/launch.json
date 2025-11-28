@@ -35,40 +35,16 @@
       , "--out_dir"     , "${workspaceFolder}/sample-themes/default"
       ]
     }
-  , { "name"    : "all-flux-bunny-dark-bright-linux-abbrev"
+  , { "name"    : "all-flux-bunny-dark-linux"
     , "type"    : "debugpy"
     , "request" : "launch"
     , "program" : "${workspaceFolder}/color_scheme_driver.py"
     , "console" : "integratedTerminal"
     , "args":
       [ "-s" , "all"
-      , "-f" , "sample-themes/flux-bunny-dark-bright/flux-bunny-dark-bright-input.json"
-      , "-n" , "flux-bunny-dark-bright"
-      , "-o" , "${workspaceFolder}/sample-themes/flux-bunny-dark-bright"
-      ]
-    }
-  , { "name"    : "all-flux-bunny-dark-bright-linux"
-    , "type"    : "debugpy"
-    , "request" : "launch"
-    , "program" : "${workspaceFolder}/color_scheme_driver.py"
-    , "console" : "integratedTerminal"
-    , "args":
-      [ "--scheme_type" , "all"
-      , "--file"        , "sample-themes/flux-bunny-dark-bright/flux-bunny-dark-bright-input.json"
-      , "--name"        , "flux-bunny-dark-bright"
-      , "--out_dir"     , "${workspaceFolder}/sample-themes/flux-bunny-dark-bright"
-      ]
-    }
-  , { "name"    : "all-flux-bunny-dark-pastel-linux"
-    , "type"    : "debugpy"
-    , "request" : "launch"
-    , "program" : "${workspaceFolder}/color_scheme_driver.py"
-    , "console" : "integratedTerminal"
-    , "args":
-      [ "--scheme_type" , "all"
-      , "--file"        , "sample-themes/flux-bunny-dark-pastel/flux-bunny-dark-pastel-input.json"
-      , "--name"        , "flux-bunny-dark-pastel"
-      , "--out_dir"     , "${workspaceFolder}/sample-themes/flux-bunny-dark-pastel"
+      , "-f" , "sample-themes/flux-bunny-dark/flux-bunny-dark-input.json"
+      , "-n" , "flux-bunny-dark"
+      , "-o" , "${workspaceFolder}/sample-themes/flux-bunny-dark"
       ]
     }
   , { "name"    : "all-flux-bunny-lite-linux"
