@@ -1,0 +1,440 @@
+{
+  "$schema"     : "vscode://schemas/color-theme"
+, "name"        : "Flux Bunny Lite"
+
+, "colors":
+  { "foreground"                                          : "#FG__NORM"
+  , "selection.background"                                : "#VIO_BGND"
+  , "errorForeground"                                     : "#FG__INVL"
+  , "focusBorder"                                         : "#CYA_BGND"
+  //, "window.activeBorder"                                 : "#CYA_BGND"
+  , "widget.border"                                       : "#GRN_BGND"
+
+
+  , "editor.background"                                   : "#BG__NORM"
+  , "editor.foreground"                                   : "#FG__NORM"
+  , "editorCursor.background"                             : "#FG__NORM"
+  , "editorCursor.foreground"                             : "#GRN_BGND"
+  , "editor.selectionBackground"                          : "#BLU_BGND5f"
+  , "editor.wordHighlightTextBackground"                  : "#VIO_BGND5f"
+
+  , "terminal.background"                                 : "#BG__BOLD"
+  , "terminal.foreground"                                 : "#FG__BOLD"
+  , "terminalCursor.background"                           : "#FG__NORM"
+  , "terminalCursor.foreground"                           : "#GRN_BGND"
+
+  , "terminal.ansiBrightBlack"                            : "#BLK_BOLD"
+  , "terminal.ansiBrightRed"                              : "#RED_BOLD"
+  , "terminal.ansiBrightGreen"                            : "#GRN_BOLD"
+  , "terminal.ansiBrightYellow"                           : "#YEL_BOLD"
+  , "terminal.ansiBrightBlue"                             : "#BLU_BOLD"
+  , "terminal.ansiBrightMagenta"                          : "#VIO_BOLD"
+  , "terminal.ansiBrightCyan"                             : "#CYA_BOLD"
+  , "terminal.ansiBrightWhite"                            : "#WHT_BOLD"
+
+  , "terminal.ansiBlack"                                  : "#BLK_NORM"
+  , "terminal.ansiRed"                                    : "#RED_NORM"
+  , "terminal.ansiGreen"                                  : "#GRN_NORM"
+  , "terminal.ansiYellow"                                 : "#YEL_NORM"
+  , "terminal.ansiBlue"                                   : "#BLU_NORM"
+  , "terminal.ansiMagenta"                                : "#VIO_NORM"
+  , "terminal.ansiCyan"                                   : "#CYA_NORM"
+  , "terminal.ansiWhite"                                  : "#WHT_NORM"
+
+  , "editorBracketHighlight.foreground1"                  : "#GRN_BOLD"
+  , "editorBracketHighlight.foreground3"                  : "#CYA_BOLD"
+  , "editorBracketHighlight.foreground2"                  : "#RED_BOLD"
+  , "editorBracketHighlight.unexpectedBracket.foreground" : "#FG__INVL"
+
+  , "editor.wordHighlightBackground"                      : "#BG__BOLDaf"
+  , "editorWarning.foreground"                            : "#YEL_BOLD"
+  , "editorError.foreground"                              : "#FG__INVL"
+  , "editorLineNumber.activeForeground"                   : "#GRN_NORM"
+  , "editorLineNumber.foreground"                         : "#878787"
+
+  , "dropdown.background"                                 : "#BG__BOLD"
+  , "dropdown.foreground"                                 : "#FG__NORM"
+  , "dropdown.border"                                     : "#GRN_NORM"
+  , "dropdown.listBackground"                             : "#BG__BOLD"
+
+  , "tab.activeBackground"                                : "#BG__NORM"
+  , "tab.activeForeground"                                : "#FG__BOLD"
+  , "tab.inactiveBackground"                              : "#BG__BOLD"
+  , "tab.inactiveForeground"                              : "#FG__NORM"
+  , "tab.unfocusedActiveForeground"                       : "#CYA_BOLD"
+  , "tab.unfocusedInactiveForeground"                     : "#FG__NORM"
+
+  , "sideBar.background"                                  : "#BG__BOLD"
+  , "sideBar.foreground"                                  : "#FG__NORM"
+  , "sideBar.border"                                      : "#GRN_NORM"
+  , "sideBarTitle.background"                             : "#BLU_BGND"
+  , "sideBarTitle.foreground"                             : "#FG__NORM"
+  , "sideBarSectionHeader.background"                     : "#VIO_BGND"
+  , "sideBarSectionHeader.foreground"                     : "#FG__NORM"
+
+  , "panel.background"                                    : "#BG__BOLD"
+  , "panel.border"                                        : "#GRN_NORM"
+  , "panelTitle.activeForeground"                         : "#FG__BOLD"
+  , "panelTitle.inactiveForeground"                       : "#FG__NORM"
+  , "panelTitle.border"                                   : "#BG__NORM"
+  //, "panelSectionHeader.background"                       : "#GRN_NORM"
+  //, "panelTitleBadge.foreground"                          : "#BG__NORM"
+
+  , "statusBar.background"                                : "#BLU_BGND"
+  , "statusBar.foreground"                                : "#FG__NORM"
+  , "statusBar.debuggingBackground"                       : "#VIO_BGND"
+  , "statusBarItem.remoteBackground"                      : "#BLU_BGND"
+
+  //, "banner.background"                                   : "#YEL_BOLD"
+
+  , "list.activeSelectionBackground"                      : "#CYA_BGND"
+  , "list.activeSelectionForeground"                      : "#FG__NORM"
+  , "list.inactiveSelectionBackground"                    : "#BG__NORM"
+  , "list.inactiveSelectionForeground"                    : "#BLU_BGND"
+  , "list.hoverBackground"                                : "#CYA_BGND5f"
+  , "list.hoverForeground"                                : "#FG__NORM"
+  , "list.dropBackground"                                 : "#YEL_BOLD"
+
+  , "list.highlightForeground"                            : "#GRN_NORM"
+  , "list.focusBackground"                                : "#BLU_BGND"
+
+  , "button.background"                                   : "#GRN_BGND"
+  , "button.foreground"                                   : "#FG__NORM"
+
+  , "debugIcon.breakpointForeground"                      : "#FG__INVL"
+  , "debugIcon.startForeground"                           : "#GRN_NORM"
+  , "debugIcon.stopForeground"                            : "#RED_NORM"
+  , "debugIcon.stepIntoForeground"                        : "#BLU_NORM"
+  , "debugIcon.stepOverForeground"                        : "#BLU_NORM"
+  , "debugIcon.stepOutForeground"                         : "#BLU_NORM"
+  , "debugIcon.continueForeground"                        : "#GRN_NORM"
+  , "debugIcon.restartForeground"                         : "#CYA_NORM"
+  , "editor.inlineValuesBackground"                       : "#BG__BOLD"
+  , "editor.inlineValuesForeground"                       : "#YEL_NORM"
+  , "editor.stackFrameHighlightBackground"                : "#BG__BOLD"
+
+  , "gitDecoration.addedResourceForeground"               : "#GRN_BOLD"
+  , "gitDecoration.modifiedResourceForeground"            : "#YEL_NORM"
+  , "gitDecoration.untrackedResourceForeground"           : "#GRN_NORM"
+
+  , "scmGraph.foreground1"                                : "#YEL_NORM"
+  , "scmGraph.historyItemBaseRefColor"                    : "#RED_BOLD"
+  , "scmGraph.historyItemRefColor"                        : "#CYA_BGND"
+  , "scmGraph.historyItemRemoteRefColor"                  : "#RED_BOLD"
+
+  //, "scmGraph.historyItemHoverDefaultLabelBackground"     : "#GRN_BGND"
+  //, "scmGraph.historyItemHoverDefaultLabelForeground"     : "#FG__NORM"
+  //, "scmGraph.foreground2"                                : "#RED_NORM"
+  //, "scmGraph.foreground3"                                : "#RED_NORM"
+  //, "scmGraph.foreground4"                                : "#RED_NORM"
+  //, "scmGraph.foreground5"                                : "#RED_NORM"
+
+  , "minimap.background"                                  : "#BG__BOLD"
+  , "minimap.errorHighlight"                              : "#FG__INVL"
+  , "minimap.warningHighlight"                            : "#YEL_NORM"
+  , "minimap.selectionHighlight"                          : "#CYA_NORMaf"
+
+  , "inputValidation.warningBackground"                   : "#FG__INVL"
+  , "inputValidation.warningForeground"                   : "#FG__NORM"
+  , "inputValidation.warningBorder"                       : "#FG__NORM"
+  , "inputValidation.errorBackground"                     : "#BG__NORM"
+  , "inputValidation.errorForeground"                     : "#FG__INVL"
+  , "inputValidation.errorBorder"                         : "#FG__INVL"
+
+  , "problemsErrorIcon.foreground"                        : "#FG__INVL"
+  , "problemsWarningIcon.foreground"                      : "#YEL_NORM"
+  , "problemsInfoIcon.foreground"                         : "#YEL_NORM"
+
+  , "symbolIcon.arrayForeground"                          : "#GRN_BOLD"
+  //, "symbolIcon.booleanForeground"                        : "#"
+  , "symbolIcon.classForeground"                          : "#CYA_NORM"
+  //, "symbolIcon.colorForeground"                          : "#"
+  , "symbolIcon.constantForeground"                       : "#YEL_NORM"
+  , "symbolIcon.constructorForeground"                    : "#VIO_NORM"
+  //, "symbolIcon.enumeratorForeground"                     : "#"
+  //, "symbolIcon.enumeratorMemberForeground"               : "#"
+  //, "symbolIcon.eventForeground"                          : "#"
+  //, "symbolIcon.fieldForeground"                          : "#"
+  //, "symbolIcon.fileForeground"                           : "#"
+  //, "symbolIcon.folderForeground"                         : "#"
+  , "symbolIcon.functionForeground"                       : "#GRN_BOLD"
+  //, "symbolIcon.interfaceForeground"                      : "#"
+  //, "symbolIcon.keyForeground"                            : "#"
+  //, "symbolIcon.keywordForeground"                        : "#"
+  , "symbolIcon.methodForeground"                         : "#GRN_BOLD"
+  , "symbolIcon.moduleForeground"                         : "#YEL_NORM"
+  //, "symbolIcon.namespaceForeground"                      : "#"
+  //, "symbolIcon.nullForeground"                           : "#"
+  //, "symbolIcon.numberForeground"                         : "#"
+  //, "symbolIcon.objectForeground"                         : "#"
+  //, "symbolIcon.operatorForeground"                       : "#"
+  //, "symbolIcon.packageForeground"                        : "#"
+  , "symbolIcon.propertyForeground"                       : "#CYA_NORM"
+  //, "symbolIcon.referenceForeground"                      : "#"
+  //, "symbolIcon.snippetForeground"                        : "#"
+  , "symbolIcon.stringForeground"                         : "#CYA_BOLD"
+  , "symbolIcon.structForeground"                         : "#YEL_NORM"
+  //, "symbolIcon.textForeground"                           : "#ffaf87"
+  //, "symbolIcon.typeParameterForeground"                  : "#"
+  , "symbolIcon.unitForeground"                           : "#RED_NORM"
+  , "symbolIcon.variableForeground"                       : "#BLU_NORM"
+
+  }
+
+, "tokenColors":
+  [ {}
+
+  , { "name"  : "Foreground"
+    , "scope": [ ""
+      , "source"
+      , "text.html" // Comment specifier
+      , "variable.parameter"
+      , "meta.body.function.definition"
+      , "meta.function.definition"
+      , "meta.function-call.arguments"
+      , "punctuation"
+      , "punctuation.definition.string"
+      , "punctuation.definition.string.begin.python"
+      , "punctuation.support.type.property-name"
+      , "punctuation.separator.arguments"
+      , "punctuation.separator.array"
+      , "punctuation.separator.dictionary.pair"
+      , "punctuation.separator.key-value"             // class="value"
+      , "string.interpolated"
+      , ""
+      ], "settings": { "foreground": "#FG__NORM" }
+  }
+
+  , { "name"  : "Foreground Bold"
+    , "scope": [ ""
+      , "keyword.control.ternary" // Java - : in Circle: "circle"
+      , ""
+      ], "settings": { "foreground": "#FG__BOLD" }
+    }
+
+  , { "name"  : "Color 1: Pink"
+    , "scope" : [ ""
+      , "entity.name.function.preprocessor"
+      , "entity.name.operator"
+      , "heading.1.markdown"
+      , "heading.1.quarto"
+      , "keyword.control"               // switch, case, break, if, for
+      , "keyword.other.directive.using" // using a = float
+      , "keyword.other.operator"
+      , "keyword.other.using"
+      , ""
+      ] , "settings": { "foreground": "#RED_NORM" }
+    }
+
+  , { "name"  : "Color 9: Bright Pink"
+    , "scope" : [ ""
+      , "invalid"
+      , ""
+      ], "settings": { "foreground": "#FG__INVL" }
+    }
+
+  , { "name"  : "Color 2: Green"
+    , "scope" : [ ""
+
+      , "heading.3.markdown"
+      , "heading.3.quarto"
+      , "keyword.operator"
+      , "keyword.operator.assignment"
+      , "keyword.operator.comparison"
+      , "punctuation.definition.constant"         // # in #ff0000
+      , "punctuation.definition.link.description"
+      , "punctuation.separator.annotation.result" // -> in def f() -> int:
+      ]
+    , "settings": { "foreground": "#GRN_NORM" }
+    }
+
+  , { "name"  : "Color 10: Dark Green"
+    , "scope" : [ ""
+      , "keyword.control.directive"
+      , "keyword.control.import"
+      , "keyword.other.export"
+      , "keyword.other.import"
+      , "storage.type.modifier"        // public
+      , ""
+      ]
+    , "settings": { "foreground": "#GRN_BOLD"}
+    }
+
+  , { "name"  : "Color 3: Yellow"
+    , "scope" : [ ""
+      , "constant.language"
+      , "heading.2.markdown"
+      , "heading.2.quarto"
+      , "keyword"
+      , "keyword.operator"
+      , "keyword.operator.cast"                       // static_cast
+      , "keyword.operator.delete"
+      , "keyword.operator.new"
+      , "meta.separator"
+      , "storage.modifier"                            // const, static
+      , "support.constant.property-value.css"
+      , ""
+      , ""
+      ], "settings": { "foreground": "#YEL_NORM"}
+    }
+
+  , { "name": "Color 11: Yellow Bold"
+    , "scope": [""
+      , "constant.character.escape"    // \n in "\n"
+      , "constant.other.placeholder"   // %02X in string
+      , "storage.type.format"          // 2x in {a:2x}
+
+      , "entity.name.operator.custom-literal"
+      , "keyword.other.unit"
+      ], "settings": { "foreground": "#YEL_BOLD" }
+    }
+
+ , { "name"  : "Color 4: Blue"
+    , "scope" : [ ""
+      //, "entity.name.variable"
+      , "heading.4.markdown"
+      , "heading.4.quarto"
+      , "meta.member.access.python"
+      , "markup.list.numbered"
+      , "variable.other.object"
+      , "variable.other.property" // b in a.b
+      , "support.type.property-name"
+      , ""
+      ], "settings": { "foreground": "#BLU_NORM"}
+    }
+
+  , { "name"  : "Color 12: Bright Blue"
+    , "scope" : [ ""
+      , "constant.other.placeholder"
+      , "entity.name.tag"
+      , "entity.name.type.parameter"
+      , "markup.underline.link.image"
+      , "meta.definition.variable.name"
+      , "meta.method.return-type"
+      , "support.type"
+      , "storage.type.built-in"                     // int
+      , "storage.type.function"                     // def in python
+      , "storage.type.primitive"                    // int
+      , "storage.type.string"                       // f in f'string'
+      , "storage.type.template.argument.typename"   // public
+      , "support.variable"
+      , ""
+      ], "settings": { "foreground": "#BLU_BOLD" }
+    }
+
+  , { "name"  : "Color 5: Violet"
+    , "scope": [ ""
+      , "entity.name.scope-resolution"
+      , "heading.5.markdown"
+      , "heading.5.quarto"
+      , "storage.type.class"
+      , "storage.type.enum"
+      , "storage.type.namespace.definition"
+      , "storage.type.struct"
+      , "storage.type.template"
+      , "storage.type.enum.enum-key.class.cpp"
+      , "variable.language.special.self"          // python
+      , "variable.language.this"                  // java
+      , "variable.other.constant"
+      , "entity.name.namespace"
+      , "keyword.control.import.shortcode"
+      , ""
+      ], "settings": { "foreground": "#VIO_NORM" }
+    }
+
+  , { "name"  : "Color 13: Dark Violet"
+    , "scope" : [ ""
+      , "constant.numeric"
+      , "constant.other.color.rgb-value"
+      , "constant.other.rgb-value"
+      , "string"
+      , ""
+      ], "settings": { "foreground": "#VIO_BOLD"}
+    }
+
+  , { "name"  : "Color 6: Cyan"
+    , "scope" : [ ""
+      , "entity.name.type"
+      , "entity.other"
+      ]
+    , "settings": { "foreground": "#CYA_NORM" }
+    }
+
+  , { "name"  : "Color 14: Dark Cyan"
+    , "scope" : [ ""
+      , "support.function"
+      , "entity.name.function"
+      , "meta.function-call"
+
+      ], "settings": { "foreground": "#CYA_BOLD" }
+    }
+
+  , { "name"  : "Color 0: Dark Grey"
+    , "scope": [ ""
+      , "comment"
+      , "punctuation.definition.comment" // Comment specifier e.g. //
+      , ""
+      ], "settings": { "foreground": "#6c6c6c" }
+    }
+
+  , { "name"  : "CSS property value"
+    , "scope" : [ ""
+      , "support.constant.property-value"
+      , "support.constant.font-name"
+      , "support.constant.media-type"
+      , "support.constant.media"
+      , "support.constant.color"
+      ]
+    , "settings": { "foreground": "#BLU_BOLD" }
+    }
+
+  , { "name"  : "Regular expression groups"
+    , "scope" : [ ""
+      , "punctuation.definition.group.regexp"
+      , "punctuation.definition.group.assertion.regexp"
+      , "punctuation.definition.character-class.regexp"
+      , "punctuation.character.set.begin.regexp"
+      , "punctuation.character.set.end.regexp"
+      , "keyword.operator.negation.regexp"
+      , "support.other.parenthesis.regexp"
+      ]
+    , "settings": { "foreground": "#d75fd7" }
+    }
+
+  , { "scope": [
+        "constant.character.character-class.regexp"
+      , "constant.other.character-class.set.regexp"
+      , "constant.other.character-class.regexp"
+      , "constant.character.set.regexp"
+      ]
+    , "settings": { "foreground": "#RED_NORM" }
+    }
+
+  , { "scope": [
+        "keyword.operator.or.regexp"
+      , "keyword.control.anchor.regexp"
+      ]
+    , "settings": { "foreground": "#DCDCAA" }
+    }
+
+  , { "scope": "keyword.operator.quantifier.regexp"
+    , "settings": { "foreground": "#d7ba7d" }
+    }
+
+  ]
+
+  // These properties override tokenColors
+, "semanticTokenColors":
+  {
+    "enumMember"    : "#YEL_NORM" // Class member variables
+  //"variable"      : "#BLU_NORM"
+  //, "property"      : "#BLU_NORM" // Class member variables
+  //, "parameter"     : "#BLU_NORM" // Function parameters
+  //, "enumMember"    : "#BLU_NORM" // Class member variables
+  //, "macro"         : "#WHT_BOLD" // PI in #define PI
+  //, "type"          : "#87d7d7" // Don't set this
+  }
+
+
+}
+

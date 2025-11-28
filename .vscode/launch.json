@@ -35,134 +35,28 @@
       , "--out_dir"     , "${workspaceFolder}/sample-themes/default"
       ]
     }
-  , { "name"    : "all-flux-dark-linux-abbrev"
+  , { "name"    : "all-flux-bunny-dark-linux"
     , "type"    : "debugpy"
     , "request" : "launch"
     , "program" : "${workspaceFolder}/color_scheme_driver.py"
     , "console" : "integratedTerminal"
     , "args":
       [ "-s" , "all"
-      , "-f" , "sample-themes/flux-dark/flux-dark-input.json"
-      , "-n" , "flux-dark"
-      , "-o" , "${workspaceFolder}/sample-themes/flux-dark"
+      , "-f" , "sample-themes/flux-bunny-dark/flux-bunny-dark-input.json"
+      , "-n" , "flux-bunny-dark"
+      , "-o" , "${workspaceFolder}/sample-themes/flux-bunny-dark"
       ]
     }
-  , { "name"    : "all-flux-dark-linux"
+  , { "name"    : "all-flux-bunny-lite-linux"
     , "type"    : "debugpy"
     , "request" : "launch"
     , "program" : "${workspaceFolder}/color_scheme_driver.py"
     , "console" : "integratedTerminal"
     , "args":
       [ "--scheme_type" , "all"
-      , "--file"        , "sample-themes/flux-dark/flux-dark-input.json"
-      , "--name"        , "flux-dark"
-      , "--out_dir"     , "${workspaceFolder}/sample-themes/flux-dark"
-      ]
-    }
-  , { "name"    : "all-flux-lite-linux"
-    , "type"    : "debugpy"
-    , "request" : "launch"
-    , "program" : "${workspaceFolder}/color_scheme_driver.py"
-    , "console" : "integratedTerminal"
-    , "args":
-      [ "--scheme_type" , "all"
-      , "--file"        , "sample-themes/flux-lite/flux-lite-input.json"
-      , "--name"        , "flux-lite"
-      , "--out_dir"     , "${workspaceFolder}/sample-themes/flux-lite"
-      ]
-    }
-
-  , { "name"    : "gnome-flux-dark-linux"
-    , "type"    : "debugpy"
-    , "request" : "launch"
-    , "program" : "${workspaceFolder}/color_scheme_driver.py"
-    , "console" : "integratedTerminal"
-    , "args":
-      [ "--scheme_type" , "gnome"
-      , "--file"        , "sample-themes/flux-dark/flux-dark-input.json"
-      , "--name"        , "flux-dark"
-      , "--out_dir"     , "${workspaceFolder}/sample-themes/flux-dark"
-      ]
-    }
-  , { "name"    : "gnome-flux-test-linux"
-    , "type"    : "debugpy"
-    , "request" : "launch"
-    , "program" : "${workspaceFolder}/color_scheme_driver.py"
-    , "console" : "integratedTerminal"
-    , "args":
-      [ "--scheme_type" , "gnome"
-      , "--file"        , "sample-themes/flux-test.json"
-      , "--name"        , "flux-test"
-      , "--out_dir"     , "${workspaceFolder}/sample-themes/flux-test"
-      ]
-    }
-  , { "name"    : "gnome-flux-lite-linux"
-    , "type"    : "debugpy"
-    , "request" : "launch"
-    , "program" : "${workspaceFolder}/color_scheme_driver.py"
-    , "console" : "integratedTerminal"
-    , "args":
-      [ "--scheme_type" , "gnome"
-      , "--file"        , "sample-themes/flux-lite/flux-lite-input.json"
-      , "--name"        , "flux-lite"
-      , "--out_dir"     , "${workspaceFolder}/sample-themes"
-      ]
-    }
-  , { "name"    : "mintty-flux-dark"
-    , "type"    : "debugpy"
-    , "request" : "launch"
-    , "program" : "${workspaceFolder}/color_scheme_driver.py"
-    , "console" : "integratedTerminal"
-    , "args"    :
-      [ "--scheme_type" , "mintty"
-      , "--file"        , "sample-themes/flux-dark/flux-dark-input.json"
-      , "--name"        , "flux-dark"
-      , "--out_dir"     , "${workspaceFolder}/sample-themes"
-      ]
-    }
-  , { "name"    : "mintty-flux-lite"
-    , "type"    : "debugpy"
-    , "request" : "launch"
-    , "program" : "${workspaceFolder}/color_scheme_driver.py"
-    , "console" : "integratedTerminal"
-    , "args"    :
-      [ "--scheme_type" , "mintty"
-      , "--file"        , "sample-themes/flux-lite/flux-lite-input.json"
-      , "--name"        , "flux-lite"
-      , "--out_dir"     , "${workspaceFolder}/sample-themes"
-      ]
-    }
-  , { "name"    : "konsole-flux-dark-linux"
-    , "type"    : "debugpy"
-    , "request" : "launch"
-    , "program" : "${workspaceFolder}/color_scheme_driver.py"
-    , "console" : "integratedTerminal"
-    , "args":
-      [ "--scheme_type" , "konsole"
-      , "--file"        , "sample-themes/flux-dark/flux-dark-input.json"
-      , "--name"        , "flux-dark"
-      , "--out_dir"     , "${workspaceFolder}/sample-themes/flux-dark"
-      ]
-    }
-  , { "name"    : "vscode-flux-dark-linux"
-    , "type"    : "debugpy"
-    , "request" : "launch"
-    , "program" : "${workspaceFolder}/color_scheme_driver.py"
-    , "console" : "integratedTerminal"
-    , "args":
-      [ "--scheme_type" , "vscode-term"
-      , "--file"        , "sample-themes/flux-dark/flux-dark-input.json"
-      , "--name"        , "vs-code-flux-dark"
-      , "--out_dir"     , "${workspaceFolder}/sample-themes"
-      ]
-    }
-  , { "name"    : "help"
-    , "type"    : "debugpy"
-    , "request" : "launch"
-    , "program" : "${workspaceFolder}/color_scheme_driver.py"
-    , "console" : "integratedTerminal"
-    , "args":
-      [ "--help"
+      , "--file"        , "sample-themes/flux-bunny-lite/flux-bunny-lite-input.json"
+      , "--name"        , "flux-bunny-lite"
+      , "--out_dir"     , "${workspaceFolder}/sample-themes/flux-bunny-lite"
       ]
     }
   , { "name"    : "out-dir-only"
@@ -172,7 +66,7 @@
     , "console" : "integratedTerminal"
     , "args"    :
       [ "--scheme_type" , "mintty"
-      , "--file"        , "sample-themes/flux-dark/flux-dark-input.json"
+      , "--file"        , "sample-themes/flux-bunny-dark-bright/flux-bunny-dark-bright-input.json"
       , "--out_dir"     , "${workspaceFolder}"
       ]
     }
@@ -187,6 +81,12 @@
       , "--name"        , "default"
       , "--out_dir"     , "${workspaceFolder}/sample-themes/default"
       ]
+    }
+  , { "name"    : "replace-color-labels-test"
+    , "type"    : "debugpy"
+    , "request" : "launch"
+    , "program" : "${workspaceFolder}/replace_color_labels.py"
+    , "console" : "integratedTerminal"
     }
   ]
 }
