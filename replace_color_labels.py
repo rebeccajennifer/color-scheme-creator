@@ -27,6 +27,10 @@
 
 from os import path
 
+# TODO: Add command line arguments for template file and output file.
+# TODO: Add option for dark vs light color scheme.
+# TODO: Read from input json file
+# TODO: Error handling for file read/write
 def get_color_label_map() -> dict:
   """
   Returns a mapping of color labels to their RGB integer values.
@@ -98,7 +102,7 @@ def get_color_label_map() -> dict:
   , 'ORN_BGND': 'ff875f'
   }
 
-  return color_label_map_dark
+  return color_label_map_lite
 
 if __name__ == '__main__':
 
